@@ -6,11 +6,11 @@ A comprehensive repository of HTML and CSS practice files, frontend exercises, c
 
 ## 📁 Repository Structure
 
-- **`HTML Practice/`** - Fundamental to advanced HTML exercises covering input elements, semantic tags, tables, forms, media, and interactive mini-projects (Car Game, Tic Tac Toe, etc.).
-- **`CSS/`** - Styling demonstrations, responsive layouts, and reusable UI components (navbars, login forms, dropdowns, menus, and widgets).
-- **`FRONTENED TASKS/`** - Practical frontend challenges and templates including landing pages, timetables, ID cards, forms, and calculators.
-- **`Prime_practice/`** - Focused practice modules on tables and form designs.
-- **`html-css-cheat-sheet-master/`** - Quick-reference cheat sheets, animation demos, and tooling guides for modern web styling.
+- [**`HTML Practice/`**](./HTML%20Practice) - Fundamental to advanced HTML exercises covering input elements, semantic tags, tables, forms, media, and interactive mini-projects (Car Game, Tic Tac Toe, etc.).
+- [**`CSS/`**](./CSS) - Styling demonstrations, responsive layouts, and reusable UI components (navbars, login forms, dropdowns, menus, and widgets).
+- [**`FRONTEND TASKS/`**](./FRONTEND%20TASKS) - Practical frontend challenges and templates including landing pages, timetables, ID cards, forms, and calculators.
+- [**`Prime_practice/`**](./Prime_practice) - Focused practice modules on tables and form designs.
+- [**`html-css-cheat-sheet-master/`**](./html-css-cheat-sheet-master) - Quick-reference cheat sheets, animation demos, and tooling guides for modern web styling.
 
 ---
 
