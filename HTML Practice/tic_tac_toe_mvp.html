@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tic Tac Toe — Multiplayer</title>
+  <style>
+    * { box-sizing: border-box; }
+    :root {
+      --bg: #0f172a;
+      --panel: #111827;
+      --panel2: #1e293b;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent2: #a78bfa;
+      --win: #22c55e;
+      --danger: #f43f5e;
+      --border: rgba(255,255,255,.1);
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: radial-gradient(circle at top, #1e293b 0%, var(--bg) 55%);
+      color: var(--text);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+    .app { width: min(680px, 100%); }
+    header { text-align: center; margin-bottom: 22px; }
+    h1 { margin: 0 0 6px; font-size: clamp(2rem, 7vw, 3.2rem); }
+    header p { margin: 0; color: var(--muted); }
+    .scoreboard {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 12px;
+      align-items: stretch;
+      margin-bottom: 18px;
+    }
+    .score {
+      background: rgba(17,24,39,.88);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 16px;
+      text-align: center;
+      box-shadow: 0 12px 35px rgba(0,0,0,.18);
+    }
+    .score.active { outline: 2px solid var(--accent); }
+    .name { color: var(--muted); font-size: .9rem; }
+    .symbol { font-size: 1.4rem; font-weight: 800; margin: 3px 0; }
+    .points { font-size: 2.1rem; font-weight: 800; }
+    .draws {
+      display: grid;
+      place-items: center;
+      padding: 0 10px;
+      color: var(--muted);
+      font-size: .85rem;
+    }
+    .draws strong { display: block; color: var(--text); font-size: 1.1rem; text-align: center; }
+    .game {
+      background: rgba(17,24,39,.9);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: clamp(18px, 5vw, 30px);
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+    }
+    .status {
+      text-align: center;
+      margin-bottom: 18px;
+      font-weight: 700;
+      color: var(--muted);
+      min-height: 24px;
+    }
+    .board {
+      width: min(420px, 100%);
+      aspect-ratio: 1;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    .cell {
+      border: 0;
+      border-radius: 16px;
+      background: var(--panel2);
+      color: var(--text);
+      font-size: clamp(3rem, 13vw, 5rem);
+      font-weight: 900;
+      cursor: pointer;
+      transition: transform .12s, background .15s;
+    }
+    .cell:hover:not(:disabled) { transform: scale(1.025); background: #334155; }
+    .cell:disabled { cursor: default; }
+    .cell.x { color: var(--accent); }
+    .cell.o { color: var(--accent2); }
+    .cell.win { background: rgba(34,197,94,.18); box-shadow: inset 0 0 0 2px var(--win); }
+    .actions { display: flex; gap: 10px; justify-content: center; margin-top: 22px; flex-wrap: wrap; }
+    button.action {
+      border: 0;
+      border-radius: 12px;
+      padding: 11px 16px;
+      font-weight: 800;
+      cursor: pointer;
+      background: var(--text);
+      color: #0f172a;
+    }
+    button.secondary { background: #334155; color: var(--text); }
+    button.danger { background: rgba(244,63,94,.15); color: #fda4af; }
+    .tip {
+      text-align: center;
+      color: var(--muted);
+      font-size: .8rem;
+      margin-top: 14px;
+    }
+    @media (max-width: 480px) {
+      body { padding: 14px; }
+      .scoreboard { grid-template-columns: 1fr 70px 1fr; }
+      .score { padding: 12px 8px; }
+      .draws { padding: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>⭕ Tic Tac Toe ❌</h1>
+      <p>Two-player local multiplayer</p>
+    </header>
+
+    <section class="scoreboard" aria-label="Scoreboard">
+      <div class="score active" id="scoreX">
+        <div class="name">Player 1</div>
+        <div class="symbol">X</div>
+        <div class="points" id="xScore">0</div>
+      </div>
+
+      <div class="draws">
+        <div><strong id="drawScore">0</strong>Draws</div>
+      </div>
+
+      <div class="score" id="scoreO">
+        <div class="name">Player 2</div>
+        <div class="symbol">O</div>
+        <div class="points" id="oScore">0</div>
+      </div>
+    </section>
+
+    <section class="game">
+      <div class="status" id="status">Player 1's turn (X)</div>
+
+      <div class="board" id="board" aria-label="Tic Tac Toe board">
+        <button class="cell" data-index="0" aria-label="Cell 1"></button>
+        <button class="cell" data-index="1" aria-label="Cell 2"></button>
+        <button class="cell" data-index="2" aria-label="Cell 3"></button>
+        <button class="cell" data-index="3" aria-label="Cell 4"></button>
+        <button class="cell" data-index="4" aria-label="Cell 5"></button>
+        <button class="cell" data-index="5" aria-label="Cell 6"></button>
+        <button class="cell" data-index="6" aria-label="Cell 7"></button>
+        <button class="cell" data-index="7" aria-label="Cell 8"></button>
+        <button class="cell" data-index="8" aria-label="Cell 9"></button>
+      </div>
+
+      <div class="actions">
+        <button class="action" id="newRound">New Round</button>
+        <button class="action secondary" id="resetMatch">Reset Match</button>
+      </div>
+
+      <div class="tip">Scores are saved automatically in your browser.</div>
+    </section>
+  </main>
+
+  <script>
+    const cells = [...document.querySelectorAll(".cell")];
+    const statusEl = document.getElementById("status");
+    const scoreXEl = document.getElementById("xScore");
+    const scoreOEl = document.getElementById("oScore");
+    const drawScoreEl = document.getElementById("drawScore");
+    const scoreXBox = document.getElementById("scoreX");
+    const scoreOBox = document.getElementById("scoreO");
+
+    const WINNING_LINES = [
+      [0,1,2], [3,4,5], [6,7,8],
+      [0,3,6], [1,4,7], [2,5,8],
+      [0,4,8], [2,4,6]
+    ];
+
+    const saved = JSON.parse(localStorage.getItem("ticTacToeScores") || "{}");
+    let scores = {
+      X: Number(saved.X) || 0,
+      O: Number(saved.O) || 0,
+      draws: Number(saved.draws) || 0
+    };
+
+    let board = Array(9).fill("");
+    let currentPlayer = "X";
+    let roundOver = false;
+
+    function saveScores() {
+      localStorage.setItem("ticTacToeScores", JSON.stringify(scores));
+    }
+
+    function renderScores() {
+      scoreXEl.textContent = scores.X;
+      scoreOEl.textContent = scores.O;
+      drawScoreEl.textContent = scores.draws;
+      scoreXBox.classList.toggle("active", currentPlayer === "X" && !roundOver);
+      scoreOBox.classList.toggle("active", currentPlayer === "O" && !roundOver);
+    }
+
+    function getWinner() {
+      for (const [a,b,c] of WINNING_LINES) {
+        if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+          return { player: board[a], line: [a,b,c] };
+        }
+      }
+      return null;
+    }
+
+    function renderBoard() {
+      cells.forEach((cell, i) => {
+        cell.textContent = board[i];
+        cell.className = "cell";
+        if (board[i]) cell.classList.add(board[i].toLowerCase());
+        cell.disabled = Boolean(board[i]) || roundOver;
+      });
+    }
+
+    function startRound() {
+      board = Array(9).fill("");
+      currentPlayer = "X";
+      roundOver = false;
+      statusEl.textContent = "Player 1's turn (X)";
+      renderBoard();
+      renderScores();
+    }
+
+    function play(index) {
+      if (board[index] || roundOver) return;
+
+      board[index] = currentPlayer;
+
+      const result = getWinner();
+      if (result) {
+        roundOver = true;
+        scores[result.player]++;
+        result.line.forEach(i => cells[i].classList.add("win"));
+        const winnerName = result.player === "X" ? "Player 1" : "Player 2";
+        statusEl.textContent = `${winnerName} wins!`;
+        saveScores();
+        renderBoard();
+        renderScores();
+        return;
+      }
+
+      if (board.every(Boolean)) {
+        roundOver = true;
+        scores.draws++;
+        statusEl.textContent = "It's a draw!";
+        saveScores();
+        renderBoard();
+        renderScores();
+        return;
+      }
+
+      currentPlayer = currentPlayer === "X" ? "O" : "X";
+      statusEl.textContent =
+        currentPlayer === "X" ? "Player 1's turn (X)" : "Player 2's turn (O)";
+      renderBoard();
+      renderScores();
+    }
+
+    cells.forEach(cell => {
+      cell.addEventListener("click", () => play(Number(cell.dataset.index)));
+    });
+
+    document.getElementById("newRound").addEventListener("click", startRound);
+
+    document.getElementById("resetMatch").addEventListener("click", () => {
+      scores = { X: 0, O: 0, draws: 0 };
+      saveScores();
+      startRound();
+    });
+
+    renderScores();
+    startRound();
+  </script>
+</body>
+</html>

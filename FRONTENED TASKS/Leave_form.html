@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Leave Application</title>
+
+<style>
+body {
+    font-family: "Times New Roman", serif;
+    margin: 20px;
+}
+
+.container {
+    width: 800px;
+    margin: auto;
+    border: 1px solid black;
+    padding: 20px;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.logo-box {
+    position: absolute;
+    left: 0;
+}
+
+.logo-box img {
+    width: 70px;
+}
+
+.title-box {
+    text-align: center;
+}
+
+.title-box h2 {
+    margin: 2px;
+    font-size: 20px;
+}
+
+.title-box h3 {
+    margin: 2px;
+    font-size: 16px;
+}
+
+.title-box h2:last-child {
+    text-decoration: underline;
+}
+
+/* TEXT */
+.sub {
+    text-align: center;
+    font-size: 14px;
+}
+
+p {
+    font-size: 14px;
+    text-align: justify;
+}
+
+/* FORM */
+.field {
+    margin: 10px 0;
+}
+
+label {
+    margin-right: 5px;
+}
+
+input, select {
+    border: none;
+    border-bottom: 1px dotted black;
+    outline: none;
+    font-family: "Times New Roman", serif;
+    background: transparent;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.row input[type="text"] { width: 120px; }
+.row input[type="date"] { width: 140px; }
+.row input[type="time"] { width: 90px; }
+
+select { width: 180px; }
+
+/* SIGNATURE */
+.signature {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+.signatures {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.dt-row {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.dt-row input {
+    width: 110px;
+}
+
+/* OFFICE */
+.office {
+    margin-top: 40px;
+    border-top: 2px solid black;
+    padding-top: 10px;
+}
+
+.two-col {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 14px;
+}
+
+/* PRINT */
+@media print {
+    body { margin: 0; }
+    .container { border: none; width: 100%; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HEADER -->
+<div class="header">
+    <div class="logo-box">
+        <img src="/Pabuyt.png" alt="College Logo">
+    </div>
+
+    <div class="title-box">
+        <h2>NALANDA INSTITUTE OF TECHNOLOGY,BHUBANESWAR, ODISHA</h2>
+        <h3>COLLEGE BOYS/GIRLS HOSTEL</h3>
+        <h2>LEAVE APPLICATION</h2>
+    </div>
+</div>
+
+<div class="sub">(By boarders seeking permission to remain absent from the hostel)</div>
+
+<p>
+he application after due permission from Proctor, Concerned Warden & Hostel Superintendent
+        shall be submitted by the boarders to the Security at Main Gate. A fine of Rs 500/- will be
+        levied on the boarders if anyone leaves the hostel without submission of application.
+        All the leave applications must be signed by the Hostel Superintendent before one day of leaving,unless the case is considered to be urgent.
+</p>
+
+<!-- FORM -->
+
+<div class="field">
+    <label>1. Name of the Boarder:</label>
+    <input type="text" style="width:400px;">
+</div>
+
+<div class="field row">
+    <label>2. Regd No:</label>
+    <input type="text">
+    <label>Room No:</label>
+    <input type="text">
+    <label>Hostel No:</label>
+    <input type="text">
+</div>
+
+<div class="field row">
+    <label>3. Branch:</label>
+    <input type="text">
+    <label>Semester:</label>
+    <input type="text">
+    <label>Sec:</label>
+    <input type="text">
+</div>
+
+<div class="field">
+    <label>4. Purpose of leaving:</label>
+    <input type="text" style="width:500px;">
+</div>
+
+<div class="field row">
+    <label>5. Leave applied for from/on:</label>
+    <input type="date">
+    <label>to</label>
+    <input type="date">
+</div>
+
+<div class="field row">
+    <label>6. Date and Time of leaving: Date: </label>
+    <input type="date">
+    <label>Time:</label>
+    <input type="time">
+</div>
+
+<div class="field row">
+    <label>7. Expected date & time of return: Date:</label>
+    <input type="date">
+    <label>Time:</label>
+    <input type="time">
+</div>
+
+<div class="field">
+    <label>8. Destination Address:</label>
+    <input type="text" style="width:500px;">
+</div>
+
+<div class="field">
+    <label>Contact No:</label>
+    <input type="text">
+</div>
+
+<div class="field">
+    <label>9. Means of Travel:</label>
+    <select id="travel">
+        <option value="">Select</option>
+        <option>Train</option>
+        <option>Bus</option>
+        <option value="other">Any Other</option>
+    </select>
+    <input type="text" id="otherTravel" placeholder="Specify" style="display:none;">
+</div>
+
+<div class="field">
+    <label>10. Name & address of Local Guardian:</label>
+    <input type="text" style="width:500px;">
+</div>
+
+<div class="field">
+    <label>11. Name & address of Parent Contact:</label>
+    <input type="text" style="width:500px;">
+</div>
+
+<p>
+Certified that the above information is true and I have been permitted by my parents/guardians
+        for such absence from the Hostel and the authorities shall not be held responsible for my absence.
+</p>
+
+<!-- STUDENT SIGN -->
+<div class="signature">
+    <div>
+        Date: <input type="date"><br>
+        Time: <input type="time">
+    </div>
+
+    <div>
+        _______________________<br>
+        Signature of Boarder
+    </div>
+</div>
+
+<!-- OFFICE -->
+<div class="office">
+
+<h3 style="text-align:center;">For Office Use</h3>
+
+<div class="two-col">
+    <div>Recommended / Not Recommended</div>
+    <div>Allowed / Not Allowed</div>
+</div>
+
+<div class="signatures">
+
+    <div>
+        _______________________<br>
+        Signature of Proctor
+    </div>
+
+    <div>
+        _______________________<br>
+        Signature of Warden<br>
+        Date: <input type="date"><br>
+        Time: <input type="time">
+    </div>
+
+    <div>
+        _______________________<br>
+        Signature of Hostel Supt.<br>
+        Date: <input type="date"><br>
+        Time: <input type="time">
+    </div>
+
+</div>
+
+</div>
+
+<div class="footer">
+    Created by @Pabitra Lenka
+</div>
+
+</div>
+
+<script>
+document.getElementById("travel").addEventListener("change", function() {
+    document.getElementById("otherTravel").style.display =
+        this.value === "other" ? "inline-block" : "none";
+});
+</script>
+
+</body>
+</html>
