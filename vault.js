@@ -10,48 +10,54 @@
   // Complete Embedded Projects Dataset
   const VAULT_PROJECTS = [
   {
-    "id": "item-137",
-    "path": "html-css-cheat-sheet-master/animation.html",
-    "title": "Animation and Transitions",
-    "category": "Cheatsheets & References",
-    "main_group": "Cheatsheets",
-    "folder": "html-css-cheat-sheet-master",
-    "description": "Visual showcase of keyframe animations, cubic bezier transitions, loaders, and hover micro-effects.",
-    "tags": [
-      "Animation",
-      "Responsive"
-    ],
-    "icon": "book-open",
-    "size_bytes": 48445,
-    "featured": true
-  },
-  {
     "id": "item-138",
     "path": "html-css-cheat-sheet-master/fixed-position-example.html",
-    "title": "Fixed Positioning UI Layout",
+    "title": "CSS Fixed Positioning & Persistent Overlay Layout",
     "category": "Cheatsheets & References",
     "main_group": "Cheatsheets",
     "folder": "html-css-cheat-sheet-master",
-    "description": "Clean, responsive cheatsheets & references implementation built with semantic HTML & modern CSS.",
+    "description": "Practical layout demonstrating viewport-relative fixed positioning, sticky banners, and z-index stacking context.",
     "tags": [
-      "Responsive"
+      "CSS Positioning",
+      "Fixed Layout",
+      "Viewport",
+      "Cheatsheet"
     ],
     "icon": "book-open",
     "size_bytes": 2242,
     "featured": true
   },
   {
-    "id": "item-139",
-    "path": "html-css-cheat-sheet-master/html-css-cheat-sheet.html",
-    "title": "HTML5 and CSS cheat sheet",
+    "id": "item-137",
+    "path": "html-css-cheat-sheet-master/animation.html",
+    "title": "CSS Keyframe Animations & Cubic Bezier Transitions Guide",
     "category": "Cheatsheets & References",
     "main_group": "Cheatsheets",
     "folder": "html-css-cheat-sheet-master",
-    "description": "Ultimate comprehensive quick reference cheatsheet covering HTML5 tags, CSS3 selectors, box model, and flexbox.",
+    "description": "Interactive reference guide demonstrating keyframe animations, transition timing functions, loaders, and micro-interactions.",
     "tags": [
-      "Forms",
-      "Tables",
-      "Responsive"
+      "CSS Animation",
+      "Keyframes",
+      "Transitions",
+      "Cheatsheet"
+    ],
+    "icon": "book-open",
+    "size_bytes": 48445,
+    "featured": true
+  },
+  {
+    "id": "item-139",
+    "path": "html-css-cheat-sheet-master/html-css-cheat-sheet.html",
+    "title": "HTML5 & CSS3 Master Developer Reference Cheatsheet",
+    "category": "Cheatsheets & References",
+    "main_group": "Cheatsheets",
+    "folder": "html-css-cheat-sheet-master",
+    "description": "Comprehensive quick-reference cheatsheet covering semantic HTML5 tags, CSS3 selectors, box model, and layout utilities.",
+    "tags": [
+      "Cheatsheet",
+      "HTML5",
+      "CSS3",
+      "Reference"
     ],
     "icon": "book-open",
     "size_bytes": 257854,
@@ -60,29 +66,51 @@
   {
     "id": "item-140",
     "path": "html-css-cheat-sheet-master/tools.html",
-    "title": "HTML5 and CSS cheat sheet",
+    "title": "Modern Frontend Developer Tooling & Workflow Guide",
     "category": "Cheatsheets & References",
     "main_group": "Cheatsheets",
     "folder": "html-css-cheat-sheet-master",
-    "description": "Clean, responsive cheatsheets & references implementation built with semantic HTML & modern CSS.",
+    "description": "Curated guide to essential developer tools, browser devtools, linters, and productivity extensions for web development.",
     "tags": [
-      "JavaScript",
-      "Responsive"
+      "Tooling",
+      "Workflow",
+      "Developer Guide",
+      "Cheatsheet"
     ],
     "icon": "book-open",
     "size_bytes": 4942,
     "featured": true
   },
   {
-    "id": "item-74",
-    "path": "FRONTEND TASKS/new_landpage.html",
-    "title": "Flow - Don't type, just speak",
+    "id": "item-67",
+    "path": "FRONTEND TASKS/Clg_timetable.html",
+    "title": "CSE Department Section B Academic Lecture Schedule Matrix",
     "category": "Frontend Tasks & Real-World",
     "main_group": "Frontend Tasks",
     "folder": "FRONTEND TASKS",
-    "description": "Modern high-converting digital landing page featuring hero section, feature cards, and CTA buttons.",
+    "description": "Comprehensive weekly college class schedule matrix with lab slots, room allocations, subject codes, and faculty assignments.",
     "tags": [
-      "Animation",
+      "Data Table",
+      "Timetable",
+      "Academic",
+      "Schedule"
+    ],
+    "icon": "layout",
+    "size_bytes": 3985,
+    "featured": true
+  },
+  {
+    "id": "item-74",
+    "path": "FRONTEND TASKS/new_landpage.html",
+    "title": "Flow AI \u2014 Voice-to-Text Modern Startup Landing Page",
+    "category": "Frontend Tasks & Real-World",
+    "main_group": "Frontend Tasks",
+    "folder": "FRONTEND TASKS",
+    "description": "High-converting digital product landing page featuring animated hero typography, value props, feature grids, and CTA banners.",
+    "tags": [
+      "Landing Page",
+      "SaaS",
+      "Modern UI",
       "Responsive"
     ],
     "icon": "layout",
@@ -90,61 +118,49 @@
     "featured": true
   },
   {
-    "id": "item-72",
-    "path": "FRONTEND TASKS/id_card.html",
-    "title": "ID Card Generator",
-    "category": "Frontend Tasks & Real-World",
-    "main_group": "Frontend Tasks",
-    "folder": "FRONTEND TASKS",
-    "description": "Professional student identity card badge with photo placeholder, barcode, and institution branding.",
-    "tags": [
-      "JavaScript",
-      "Responsive"
-    ],
-    "icon": "layout",
-    "size_bytes": 11515,
-    "featured": true
-  },
-  {
     "id": "item-68",
     "path": "FRONTEND TASKS/Gatetpass.html",
-    "title": "Out Pass Form",
+    "title": "Student Campus Security Out-Pass & Gate Pass Request System",
     "category": "Frontend Tasks & Real-World",
     "main_group": "Frontend Tasks",
     "folder": "FRONTEND TASKS",
-    "description": "College student security out-pass / gatepass request form with validation, department fields, and signatures.",
+    "description": "Official institutional security out-pass authorization form with student verification fields, hostel warden approval, and timestamps.",
     "tags": [
-      "Responsive"
+      "Forms",
+      "Institutional",
+      "Workflow",
+      "Print-Ready"
     ],
     "icon": "layout",
     "size_bytes": 2891,
     "featured": true
   },
   {
-    "id": "item-67",
-    "path": "FRONTEND TASKS/Clg_timetable.html",
-    "title": "Time Table CSE SEC-B",
+    "id": "item-72",
+    "path": "FRONTEND TASKS/id_card.html",
+    "title": "Student Identity Card & Photo Badge Generator",
     "category": "Frontend Tasks & Real-World",
     "main_group": "Frontend Tasks",
     "folder": "FRONTEND TASKS",
-    "description": "Comprehensive semester schedule matrix with period timings, lab slots, and subject codes.",
+    "description": "Customizable student identity badge generator with dynamic real-time field inputs, photo upload, barcode, and print layout.",
     "tags": [
+      "Interactive",
+      "Generator",
       "JavaScript",
-      "Tables",
-      "Responsive"
+      "Utility"
     ],
     "icon": "layout",
-    "size_bytes": 3985,
+    "size_bytes": 11515,
     "featured": true
   },
   {
     "id": "item-91",
     "path": "HTML Practice/Car_Game.html",
-    "title": "Drive Mad",
+    "title": "Drive Mad \u2014 3D Physics Racing Arcade Game",
     "category": "Games & Mini-Apps",
     "main_group": "Games & Mini-Apps",
     "folder": "HTML Practice",
-    "description": "Exciting playable 3D arcade driving game with physics, obstacles, score tracking, and keyboard controls.",
+    "description": "Full-screen playable 3D arcade driving game with obstacle tracks, suspension physics, score tracking, and keyboard controls.",
     "tags": [
       "Playable",
       "Game",
@@ -158,13 +174,15 @@
   {
     "id": "item-71",
     "path": "FRONTEND TASKS/calco.html",
-    "title": "Simple Calculator",
+    "title": "Interactive Neumorphic Arithmetic Calculator",
     "category": "Games & Mini-Apps",
     "main_group": "Games & Mini-Apps",
     "folder": "FRONTEND TASKS",
-    "description": "Modern responsive calculator with arithmetic operations, sleek glassmorphism, and instant calculation.",
+    "description": "Responsive web calculator featuring arithmetic operators, decimal precision, clear display, and tactile button feedback.",
     "tags": [
+      "Interactive",
       "JavaScript",
+      "Utility",
       "Responsive"
     ],
     "icon": "gamepad",
@@ -174,143 +192,142 @@
   {
     "id": "item-131",
     "path": "HTML Practice/tic_tac_toe_mvp.html",
-    "title": "Tic Tac Toe \u2014 Multiplayer",
+    "title": "Tic Tac Toe \u2014 2-Player Interactive Multiplayer Game",
     "category": "Games & Mini-Apps",
     "main_group": "Games & Mini-Apps",
     "folder": "HTML Practice",
-    "description": "Interactive 2-player Tic Tac Toe game with win-condition algorithms, reset functionality, and score counter.",
+    "description": "Classic 2-player Tic-Tac-Toe game with winning combination detection, score counters, turn tracking, and reset controls.",
     "tags": [
       "Playable",
       "Game",
       "JavaScript",
-      "Responsive"
+      "Turn-Based"
     ],
     "icon": "gamepad",
     "size_bytes": 8892,
     "featured": true
   },
   {
-    "id": "item-32",
-    "path": "CSS/css-components-main/logins/login-16/index.html",
-    "title": "Animation 1",
-    "category": "UI: Logins",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: logins implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Forms",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 4186,
-    "featured": true
-  },
-  {
-    "id": "item-3",
-    "path": "CSS/css-components-main/cards/card-1/index.html",
-    "title": "Card 1",
-    "category": "UI: Cards",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: cards implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 918,
-    "featured": true
-  },
-  {
-    "id": "item-4",
-    "path": "CSS/css-components-main/cards/card-10/index.html",
-    "title": "Cards",
-    "category": "UI: Cards",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: cards implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "JavaScript",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 2507,
-    "featured": true
-  },
-  {
-    "id": "item-12",
-    "path": "CSS/css-components-main/dashboards/dashboard-1/index.html",
-    "title": "Dashboards",
-    "category": "UI: Dashboards",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: dashboards implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 2081,
-    "featured": true
-  },
-  {
     "id": "item-28",
     "path": "CSS/css-components-main/logins/login-1/index.html",
-    "title": "Logins",
+    "title": "Clean Modern Login Form with Floating Labels",
     "category": "UI: Logins",
     "main_group": "UI Components",
     "folder": "CSS",
-    "description": "Clean, responsive ui: logins implementation built with semantic HTML & modern CSS.",
+    "description": "Minimalist login card featuring CSS floating label animations, password reveal trigger, and social OAuth options.",
     "tags": [
+      "Logins",
+      "Floating Labels",
       "Forms",
-      "Responsive"
+      "Auth"
     ],
     "icon": "palette",
     "size_bytes": 943,
     "featured": true
   },
   {
-    "id": "item-29",
-    "path": "CSS/css-components-main/logins/login-10/index.html",
-    "title": "Logins",
-    "category": "UI: Logins",
+    "id": "item-4",
+    "path": "CSS/css-components-main/cards/card-10/index.html",
+    "title": "E-Commerce Checkout & Order Summary Card",
+    "category": "UI: Cards",
     "main_group": "UI Components",
     "folder": "CSS",
-    "description": "Clean, responsive ui: logins implementation built with semantic HTML & modern CSS.",
+    "description": "Checkout order review card listing items, subtotal, shipping fees, tax calculation, and payment authorization button.",
     "tags": [
-      "Forms",
-      "Responsive"
+      "Cards",
+      "Checkout",
+      "Order Summary",
+      "E-Commerce"
     ],
     "icon": "palette",
-    "size_bytes": 1907,
+    "size_bytes": 2507,
+    "featured": true
+  },
+  {
+    "id": "item-3",
+    "path": "CSS/css-components-main/cards/card-1/index.html",
+    "title": "Executive Contact & Profile Card (Kaye Morris)",
+    "category": "UI: Cards",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Personal profile card featuring avatar image, job title, verified badge, email trigger, and social profile links.",
+    "tags": [
+      "Cards",
+      "Profile",
+      "Avatar",
+      "Social"
+    ],
+    "icon": "palette",
+    "size_bytes": 918,
     "featured": true
   },
   {
     "id": "item-30",
     "path": "CSS/css-components-main/logins/login-12/index.html",
-    "title": "Logins",
+    "title": "Fintech Secure Payment Gateway Login",
     "category": "UI: Logins",
     "main_group": "UI Components",
     "folder": "CSS",
-    "description": "Clean, responsive ui: logins implementation built with semantic HTML & modern CSS.",
+    "description": "Banking and payments authentication screen featuring security trust badges, encryption certificates, and dual-auth safeguards.",
     "tags": [
-      "Forms",
-      "Responsive"
+      "Logins",
+      "Fintech",
+      "Payment Gateway",
+      "Security"
     ],
     "icon": "palette",
     "size_bytes": 1940,
     "featured": true
   },
   {
-    "id": "item-31",
-    "path": "CSS/css-components-main/logins/login-15/index.html",
-    "title": "Logins",
+    "id": "item-32",
+    "path": "CSS/css-components-main/logins/login-16/index.html",
+    "title": "Floating Keyframe Animated Auth Card",
     "category": "UI: Logins",
     "main_group": "UI Components",
     "folder": "CSS",
-    "description": "Clean, responsive ui: logins implementation built with semantic HTML & modern CSS.",
+    "description": "Dynamic sign-in container with gentle floating hover animation, ambient shadow pulse, and animated gradient button.",
     "tags": [
-      "JavaScript",
-      "Forms",
-      "Responsive"
+      "Logins",
+      "CSS Animation",
+      "Floating Card",
+      "Micro-Interactions"
+    ],
+    "icon": "palette",
+    "size_bytes": 4186,
+    "featured": true
+  },
+  {
+    "id": "item-29",
+    "path": "CSS/css-components-main/logins/login-10/index.html",
+    "title": "Minimalist Clean Border Email Login",
+    "category": "UI: Logins",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Lightweight, distraction-free sign-in form with crisp single-pixel borders, subtle focus glow, and inline error states.",
+    "tags": [
+      "Logins",
+      "Minimalist",
+      "Clean Borders",
+      "Forms"
+    ],
+    "icon": "palette",
+    "size_bytes": 1907,
+    "featured": true
+  },
+  {
+    "id": "item-31",
+    "path": "CSS/css-components-main/logins/login-15/index.html",
+    "title": "Moonpay Web3 & Crypto Wallet Login Portal",
+    "category": "UI: Logins",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Cryptocurrency and decentralized app login portal with wallet connect button, seed phrase protection, and token balances.",
+    "tags": [
+      "Logins",
+      "Web3",
+      "Crypto Wallet",
+      "Moonpay"
     ],
     "icon": "palette",
     "size_bytes": 1966,
@@ -319,12 +336,15 @@
   {
     "id": "item-44",
     "path": "CSS/css-components-main/navbars/navbar-1/index.html",
-    "title": "Navbars",
+    "title": "Responsive Sticky Brand Header with Action CTA",
     "category": "UI: Navbars",
     "main_group": "UI Components",
     "folder": "CSS",
-    "description": "Clean, responsive ui: navbars implementation built with semantic HTML & modern CSS.",
+    "description": "Clean sticky navigation bar with brand monogram, navigation links, user menu, and primary sign-up call-to-action button.",
     "tags": [
+      "Navbars",
+      "Sticky Nav",
+      "Header",
       "Responsive"
     ],
     "icon": "palette",
@@ -332,96 +352,108 @@
     "featured": true
   },
   {
-    "id": "item-134",
-    "path": "Prime_practice/form.html",
-    "title": "Form Validation & Input Lab",
-    "category": "Forms & Tables Lab",
-    "main_group": "Forms & Tables",
-    "folder": "Prime_practice",
-    "description": "Clean, responsive forms & tables lab implementation built with semantic HTML & modern CSS.",
+    "id": "item-12",
+    "path": "CSS/css-components-main/dashboards/dashboard-1/index.html",
+    "title": "SaaS Revenue, Refunds, & Monthly Profit Dashboard",
+    "category": "UI: Dashboards",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Executive analytics dashboard widget displaying monthly revenue KPI cards, sales volume, refunds, and currency formatting.",
     "tags": [
-      "Forms",
-      "Responsive"
+      "Dashboard",
+      "Analytics",
+      "KPI Cards",
+      "Finance"
     ],
-    "icon": "table",
-    "size_bytes": 969,
-    "featured": false
-  },
-  {
-    "id": "item-135",
-    "path": "Prime_practice/form_name.html",
-    "title": "Multi-Step Student Registration Form",
-    "category": "Forms & Tables Lab",
-    "main_group": "Forms & Tables",
-    "folder": "Prime_practice",
-    "description": "Clean, responsive forms & tables lab implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Forms",
-      "Responsive"
-    ],
-    "icon": "table",
-    "size_bytes": 362,
-    "featured": false
+    "icon": "palette",
+    "size_bytes": 2081,
+    "featured": true
   },
   {
     "id": "item-136",
     "path": "Prime_practice/prime_Table.html",
-    "title": "Prime Data Table & Records",
+    "title": "Prime Academic Records & Grades Table",
     "category": "Forms & Tables Lab",
     "main_group": "Forms & Tables",
     "folder": "Prime_practice",
-    "description": "Clean, responsive forms & tables lab implementation built with semantic HTML & modern CSS.",
+    "description": "Structured data table detailing academic student records, roll numbers, subject marks, and grade classifications.",
     "tags": [
-      "Tables",
-      "Responsive"
+      "Data Table",
+      "Academic Records",
+      "Grades",
+      "Table"
     ],
     "icon": "table",
     "size_bytes": 791,
     "featured": false
   },
   {
-    "id": "item-81",
-    "path": "FRONTEND TASKS/task 4.html",
-    "title": "ALL HTML TAGS!",
-    "category": "Frontend Tasks & Real-World",
-    "main_group": "Frontend Tasks",
-    "folder": "FRONTEND TASKS",
-    "description": "Clean, responsive frontend tasks & real-world implementation built with semantic HTML & modern CSS.",
+    "id": "item-135",
+    "path": "Prime_practice/form_name.html",
+    "title": "Prime Multi-Field Name & Credential Form",
+    "category": "Forms & Tables Lab",
+    "main_group": "Forms & Tables",
+    "folder": "Prime_practice",
+    "description": "Targeted input exercise focusing on first name, middle name, last name, and credential validation fields.",
     "tags": [
-      "Tables",
-      "Responsive"
+      "Forms",
+      "Name Inputs",
+      "Validation",
+      "Inputs"
     ],
-    "icon": "layout",
-    "size_bytes": 2528,
+    "icon": "table",
+    "size_bytes": 362,
     "featured": false
   },
   {
-    "id": "item-78",
-    "path": "FRONTEND TASKS/table2.html",
-    "title": "COLLEGE ROUTINE",
+    "id": "item-134",
+    "path": "Prime_practice/form.html",
+    "title": "Prime Student Registration & Enrollment Form",
+    "category": "Forms & Tables Lab",
+    "main_group": "Forms & Tables",
+    "folder": "Prime_practice",
+    "description": "Focused practice registration form with student personal information, course enrollment fields, and submit controls.",
+    "tags": [
+      "Forms",
+      "Registration",
+      "Enrollment",
+      "Inputs"
+    ],
+    "icon": "table",
+    "size_bytes": 969,
+    "featured": false
+  },
+  {
+    "id": "item-76",
+    "path": "FRONTEND TASKS/newtimetab.html",
+    "title": "B.Tech 1st Year Semester Class Schedule Routine 2.0",
     "category": "Frontend Tasks & Real-World",
     "main_group": "Frontend Tasks",
     "folder": "FRONTEND TASKS",
-    "description": "Clean, responsive frontend tasks & real-world implementation built with semantic HTML & modern CSS.",
+    "description": "Modernized university class schedule grid with enhanced column headers, period timings, and department subject allocations.",
     "tags": [
-      "Tables",
-      "Responsive"
+      "Data Table",
+      "Timetable",
+      "Responsive",
+      "Academic"
     ],
     "icon": "layout",
-    "size_bytes": 3237,
+    "size_bytes": 2661,
     "featured": false
   },
   {
     "id": "item-77",
     "path": "FRONTEND TASKS/sec-c.html",
-    "title": "Class Timetable",
+    "title": "B.Tech Computer Science Section C Daily Class Timetable",
     "category": "Frontend Tasks & Real-World",
     "main_group": "Frontend Tasks",
     "folder": "FRONTEND TASKS",
-    "description": "Clean, responsive frontend tasks & real-world implementation built with semantic HTML & modern CSS.",
+    "description": "Detailed classroom timetable table for Section C students mapping lecture periods, lab experiments, and tutorial sessions.",
     "tags": [
-      "Tables",
-      "Responsive"
+      "Data Table",
+      "Timetable",
+      "Academic",
+      "Schedule"
     ],
     "icon": "layout",
     "size_bytes": 2532,
@@ -430,92 +462,178 @@
   {
     "id": "item-82",
     "path": "FRONTEND TASKS/timetable-c.html",
-    "title": "Class Timetable",
+    "title": "B.Tech First Year Section C Weekly Schedule Matrix",
     "category": "Frontend Tasks & Real-World",
     "main_group": "Frontend Tasks",
     "folder": "FRONTEND TASKS",
-    "description": "Comprehensive semester schedule matrix with period timings, lab slots, and subject codes.",
+    "description": "Complete semester weekly timetable matrix highlighting core engineering subjects, laboratory batches, and elective periods.",
     "tags": [
-      "Tables",
-      "Responsive"
+      "Data Table",
+      "Timetable",
+      "Engineering",
+      "Academic"
     ],
     "icon": "layout",
     "size_bytes": 3240,
     "featured": false
   },
   {
-    "id": "item-76",
-    "path": "FRONTEND TASKS/newtimetab.html",
-    "title": "Class Timetable 2.0",
+    "id": "item-73",
+    "path": "FRONTEND TASKS/movietask.html",
+    "title": "Classic Cinema Filmography & Box Office Showcase Table",
     "category": "Frontend Tasks & Real-World",
     "main_group": "Frontend Tasks",
     "folder": "FRONTEND TASKS",
-    "description": "Clean, responsive frontend tasks & real-world implementation built with semantic HTML & modern CSS.",
+    "description": "Structured movie catalog table displaying classic Bollywood titles, release years, lead actors, and poster artwork.",
     "tags": [
-      "Tables",
-      "Responsive"
+      "Data Table",
+      "Media",
+      "Catalog",
+      "Grid"
     ],
     "icon": "layout",
-    "size_bytes": 2661,
+    "size_bytes": 1133,
     "featured": false
   },
   {
-    "id": "item-84",
-    "path": "FRONTEND TASKS/web2.html",
-    "title": "Computer System Structure",
+    "id": "item-78",
+    "path": "FRONTEND TASKS/table2.html",
+    "title": "College Routine & Faculty Period Distribution Matrix",
     "category": "Frontend Tasks & Real-World",
     "main_group": "Frontend Tasks",
     "folder": "FRONTEND TASKS",
-    "description": "Clean, responsive frontend tasks & real-world implementation built with semantic HTML & modern CSS.",
+    "description": "Faculty and course schedule matrix featuring merged cell headers, lecture halls, and practical session intervals.",
     "tags": [
-      "Responsive"
+      "Data Table",
+      "Timetable",
+      "Merged Cells",
+      "Schedule"
     ],
     "icon": "layout",
-    "size_bytes": 1183,
+    "size_bytes": 3237,
     "featured": false
   },
   {
     "id": "item-80",
     "path": "FRONTEND TASKS/task 2.html",
-    "title": "LIST TAG!",
+    "title": "Comprehensive HTML Semantic Lists & Hierarchy Showcase",
     "category": "Frontend Tasks & Real-World",
     "main_group": "Frontend Tasks",
     "folder": "FRONTEND TASKS",
-    "description": "Clean, responsive frontend tasks & real-world implementation built with semantic HTML & modern CSS.",
+    "description": "Educational demonstration of multi-level nested lists, definition lists, custom list markers, and Roman numeral ordering.",
     "tags": [
-      "Responsive"
+      "Semantic HTML",
+      "Lists",
+      "Structure",
+      "Cheatsheet"
     ],
     "icon": "layout",
     "size_bytes": 880,
     "featured": false
   },
   {
-    "id": "item-69",
-    "path": "FRONTEND TASKS/Lab_paper.html",
-    "title": "Lab Record Sheet",
+    "id": "item-66",
+    "path": "FRONTEND TASKS/30task3.html",
+    "title": "Computer Hardware Architecture & Subsystem Hierarchy Guide",
     "category": "Frontend Tasks & Real-World",
     "main_group": "Frontend Tasks",
     "folder": "FRONTEND TASKS",
-    "description": "Clean, responsive frontend tasks & real-world implementation built with semantic HTML & modern CSS.",
+    "description": "Structured nested ordered list guide detailing computer architecture, CPU registers, buses, and storage hierarchies.",
     "tags": [
-      "JavaScript",
+      "Semantic HTML",
+      "Nested Lists",
+      "Education",
+      "Structure"
+    ],
+    "icon": "layout",
+    "size_bytes": 775,
+    "featured": false
+  },
+  {
+    "id": "item-84",
+    "path": "FRONTEND TASKS/web2.html",
+    "title": "Computer System Hardware & OS Hierarchy Guide",
+    "category": "Frontend Tasks & Real-World",
+    "main_group": "Frontend Tasks",
+    "folder": "FRONTEND TASKS",
+    "description": "Technical guide outlining operating system layers, hardware interfaces, memory hierarchies, and kernel abstractions.",
+    "tags": [
+      "Education",
+      "Computer Science",
+      "Hierarchy",
+      "Structure"
+    ],
+    "icon": "layout",
+    "size_bytes": 1183,
+    "featured": false
+  },
+  {
+    "id": "item-81",
+    "path": "FRONTEND TASKS/task 4.html",
+    "title": "HTML5 Multimedia Master Hub (Audio, Video, Formatting)",
+    "category": "Frontend Tasks & Real-World",
+    "main_group": "Frontend Tasks",
+    "folder": "FRONTEND TASKS",
+    "description": "Multimedia rich showcase demonstrating native HTML5 audio controls, video embeds, table layouts, and text formatting tags.",
+    "tags": [
+      "Multimedia",
+      "HTML5",
+      "Audio/Video",
+      "Showcase"
+    ],
+    "icon": "layout",
+    "size_bytes": 2528,
+    "featured": false
+  },
+  {
+    "id": "item-85",
+    "path": "FRONTEND TASKS/web3.html",
+    "title": "Multi-Field User Information & Contact Portal",
+    "category": "Frontend Tasks & Real-World",
+    "main_group": "Frontend Tasks",
+    "folder": "FRONTEND TASKS",
+    "description": "Comprehensive personal registration interface with contact details, address fields, and account credential setup.",
+    "tags": [
+      "Forms",
+      "User Profile",
+      "Inputs",
       "Responsive"
     ],
     "icon": "layout",
-    "size_bytes": 2148,
+    "size_bytes": 3473,
+    "featured": false
+  },
+  {
+    "id": "item-75",
+    "path": "FRONTEND TASKS/newhard.html",
+    "title": "Multi-Period Weekly College Schedule Routine",
+    "category": "Frontend Tasks & Real-World",
+    "main_group": "Frontend Tasks",
+    "folder": "FRONTEND TASKS",
+    "description": "Color-coded weekly academic routine matrix organizing theory lectures, lab sessions, and lunch breaks across all five weekdays.",
+    "tags": [
+      "Data Table",
+      "Timetable",
+      "Grid",
+      "Academic"
+    ],
+    "icon": "layout",
+    "size_bytes": 3659,
     "featured": false
   },
   {
     "id": "item-70",
     "path": "FRONTEND TASKS/Leave_form.html",
-    "title": "Leave Application",
+    "title": "Official Student Medical & Academic Leave Application Form",
     "category": "Frontend Tasks & Real-World",
     "main_group": "Frontend Tasks",
     "folder": "FRONTEND TASKS",
-    "description": "Clean, responsive frontend tasks & real-world implementation built with semantic HTML & modern CSS.",
+    "description": "Formal multi-field leave request document including reason selection, date range pickers, parental contact, and signature blocks.",
     "tags": [
-      "JavaScript",
-      "Responsive"
+      "Forms",
+      "Application",
+      "Institutional",
+      "Workflow"
     ],
     "icon": "layout",
     "size_bytes": 6244,
@@ -524,217 +642,178 @@
   {
     "id": "item-79",
     "path": "FRONTEND TASKS/tablet3.html",
-    "title": "Timetable",
+    "title": "Student Academic Marks & Timetable Ledger",
     "category": "Frontend Tasks & Real-World",
     "main_group": "Frontend Tasks",
     "folder": "FRONTEND TASKS",
-    "description": "Clean, responsive frontend tasks & real-world implementation built with semantic HTML & modern CSS.",
+    "description": "Structured ledger table combining student performance metrics, course grading criteria, and exam time intervals.",
     "tags": [
-      "Tables",
-      "Responsive"
+      "Data Table",
+      "Ledger",
+      "Grades",
+      "Academic"
     ],
     "icon": "layout",
     "size_bytes": 3665,
     "featured": false
   },
   {
-    "id": "item-85",
-    "path": "FRONTEND TASKS/web3.html",
-    "title": "User Personal Information",
+    "id": "item-69",
+    "path": "FRONTEND TASKS/Lab_paper.html",
+    "title": "University Semester Practical Examination Lab Record Sheet",
     "category": "Frontend Tasks & Real-World",
     "main_group": "Frontend Tasks",
     "folder": "FRONTEND TASKS",
-    "description": "Clean, responsive frontend tasks & real-world implementation built with semantic HTML & modern CSS.",
+    "description": "Official semester examination laboratory paper layout with course codes, question distribution, evaluation rubrics, and marks tally.",
     "tags": [
+      "Academic",
+      "Exam Paper",
       "Forms",
-      "Responsive"
+      "Print-Ready"
     ],
     "icon": "layout",
-    "size_bytes": 3473,
+    "size_bytes": 2148,
     "featured": false
   },
   {
     "id": "item-83",
     "path": "FRONTEND TASKS/web1.html",
-    "title": "User Registration Form",
+    "title": "User Personal Information & Registration Portal",
     "category": "Frontend Tasks & Real-World",
     "main_group": "Frontend Tasks",
     "folder": "FRONTEND TASKS",
-    "description": "Clean, responsive frontend tasks & real-world implementation built with semantic HTML & modern CSS.",
+    "description": "Clean structured user registration form with fieldsets, personal data inputs, date of birth picker, and submit actions.",
     "tags": [
       "Forms",
-      "Responsive"
+      "Registration",
+      "Fieldset",
+      "Validation"
     ],
     "icon": "layout",
     "size_bytes": 2920,
     "featured": false
   },
   {
-    "id": "item-66",
-    "path": "FRONTEND TASKS/30task3.html",
-    "title": "Using only Orderlist",
-    "category": "Frontend Tasks & Real-World",
-    "main_group": "Frontend Tasks",
-    "folder": "FRONTEND TASKS",
-    "description": "Clean, responsive frontend tasks & real-world implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "layout",
-    "size_bytes": 775,
-    "featured": false
-  },
-  {
-    "id": "item-75",
-    "path": "FRONTEND TASKS/newhard.html",
-    "title": "new table",
-    "category": "Frontend Tasks & Real-World",
-    "main_group": "Frontend Tasks",
-    "folder": "FRONTEND TASKS",
-    "description": "Clean, responsive frontend tasks & real-world implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Tables",
-      "Responsive"
-    ],
-    "icon": "layout",
-    "size_bytes": 3659,
-    "featured": false
-  },
-  {
-    "id": "item-73",
-    "path": "FRONTEND TASKS/movietask.html",
-    "title": "top3movies",
-    "category": "Frontend Tasks & Real-World",
-    "main_group": "Frontend Tasks",
-    "folder": "FRONTEND TASKS",
-    "description": "Clean, responsive frontend tasks & real-world implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Tables",
-      "Responsive"
-    ],
-    "icon": "layout",
-    "size_bytes": 1133,
-    "featured": false
-  },
-  {
-    "id": "item-121",
-    "path": "HTML Practice/sp.html",
-    "title": "ALL HTML TAGS!",
+    "id": "item-132",
+    "path": "HTML Practice/timetable-c.html",
+    "title": "Academic Routine & Weekly Period Allocator",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Weekly university timetable detailing lecture periods, faculty names, classroom numbers, and practical lab assignments.",
     "tags": [
-      "Tables",
-      "Responsive"
+      "Data Table",
+      "Timetable",
+      "Academic",
+      "Schedule"
     ],
     "icon": "file-text",
-    "size_bytes": 2527,
+    "size_bytes": 3240,
     "featured": false
   },
   {
-    "id": "item-126",
-    "path": "HTML Practice/task 1.html",
-    "title": "ALL HTML TAGS!",
+    "id": "item-103",
+    "path": "HTML Practice/hardtask.html",
+    "title": "Advanced Multi-Column Semantic Layout Structure",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Challenging HTML layout challenge assembling headers, side navigation bars, main content articles, and supplementary widgets.",
     "tags": [
-      "Tables",
-      "Responsive"
+      "Layout Challenge",
+      "Multi-Column",
+      "Semantics",
+      "Grid"
     ],
     "icon": "file-text",
-    "size_bytes": 2527,
-    "featured": false
-  },
-  {
-    "id": "item-128",
-    "path": "HTML Practice/task 4.html",
-    "title": "ALL HTML TAGS!",
-    "category": "HTML Practice Labs",
-    "main_group": "HTML Practice",
-    "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Tables",
-      "Responsive"
-    ],
-    "icon": "file-text",
-    "size_bytes": 2528,
-    "featured": false
-  },
-  {
-    "id": "item-93",
-    "path": "HTML Practice/anchor.html",
-    "title": "Anchor",
-    "category": "HTML Practice Labs",
-    "main_group": "HTML Practice",
-    "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "file-text",
-    "size_bytes": 632,
+    "size_bytes": 3280,
     "featured": false
   },
   {
     "id": "item-109",
     "path": "HTML Practice/marqee.html",
-    "title": "Animated Marquee & Broadcast Ticker",
+    "title": "Animated Breaking News Ticker & Scrolling Marquee",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Dynamic scrolling marquee ticker showcasing continuous horizontal animation, speed controls, and broadcast news styling.",
     "tags": [
-      "Responsive"
+      "Marquee",
+      "Animation",
+      "News Ticker",
+      "Motion"
     ],
     "icon": "file-text",
     "size_bytes": 281,
     "featured": false
   },
   {
-    "id": "item-95",
-    "path": "HTML Practice/blockqt.html",
-    "title": "Blockquote & Stylized Citations",
+    "id": "item-120",
+    "path": "HTML Practice/sec-c.html",
+    "title": "B.Tech Section C Daily Class Schedule Table",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Academic class routine table with period columns, day rows, and highlighted lab experiment hours.",
     "tags": [
-      "Responsive"
+      "Data Table",
+      "Timetable",
+      "Academic",
+      "Schedule"
     ],
     "icon": "file-text",
-    "size_bytes": 608,
+    "size_bytes": 2532,
     "featured": false
   },
   {
-    "id": "item-125",
-    "path": "HTML Practice/table2.html",
-    "title": "COLLEGE ROUTINE",
+    "id": "item-96",
+    "path": "HTML Practice/center.html",
+    "title": "CSS Alignment, Flexbox & Block Centering Lab",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Practical experiments comparing traditional margin auto, flexbox justify/align, and absolute transform centering methods.",
     "tags": [
-      "Tables",
-      "Responsive"
+      "Centering",
+      "Flexbox",
+      "CSS Layout",
+      "Lab"
     ],
     "icon": "file-text",
-    "size_bytes": 3243,
+    "size_bytes": 253,
+    "featured": false
+  },
+  {
+    "id": "item-94",
+    "path": "HTML Practice/bgtext.html",
+    "title": "CSS Background-Clip & Gradient Text Effect Demo",
+    "category": "HTML Practice Labs",
+    "main_group": "HTML Practice",
+    "folder": "HTML Practice",
+    "description": "Modern CSS technique masking vivid gradient backgrounds into typography glyphs using background-clip: text.",
+    "tags": [
+      "CSS Tricks",
+      "Gradient Text",
+      "Typography",
+      "Visual FX"
+    ],
+    "icon": "file-text",
+    "size_bytes": 402,
     "featured": false
   },
   {
     "id": "item-86",
     "path": "HTML Practice/12task.html",
-    "title": "CSS Layout & Selectors Exercise 1",
+    "title": "CSS Box Model & Element Width Calculator Lab",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Interactive layout demonstrating how content width, padding, borders, and margins combine to form total element dimensions.",
     "tags": [
-      "Responsive"
+      "CSS Box Model",
+      "Dimensions",
+      "Calculator",
+      "Lab"
     ],
     "icon": "file-text",
     "size_bytes": 518,
@@ -743,245 +822,304 @@
   {
     "id": "item-87",
     "path": "HTML Practice/12task1.html",
-    "title": "CSS Layout & Selectors Exercise 2",
+    "title": "CSS Box Model Margin, Padding & Border Lab",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Visual demonstration color-coding margin, border, padding, and content boxes to illustrate browser layout calculations.",
     "tags": [
-      "Responsive"
+      "CSS Box Model",
+      "Padding/Margin",
+      "Borders",
+      "Lab"
     ],
     "icon": "file-text",
     "size_bytes": 926,
     "featured": false
   },
   {
-    "id": "item-88",
-    "path": "HTML Practice/12task2.html",
-    "title": "CSS Layout & Selectors Exercise 3",
-    "category": "HTML Practice Labs",
-    "main_group": "HTML Practice",
-    "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Tables",
-      "Responsive"
-    ],
-    "icon": "file-text",
-    "size_bytes": 1958,
-    "featured": false
-  },
-  {
     "id": "item-97",
     "path": "HTML Practice/class.html",
-    "title": "Class",
+    "title": "CSS Class Selectors & Component Reusability Lab",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Tutorial page illustrating CSS class naming conventions, selector specificity, and modular styling reuse.",
     "tags": [
-      "Responsive"
+      "CSS Classes",
+      "Selectors",
+      "Specificity",
+      "Fundamentals"
     ],
     "icon": "file-text",
     "size_bytes": 3780,
     "featured": false
   },
   {
-    "id": "item-120",
-    "path": "HTML Practice/sec-c.html",
-    "title": "Class Timetable",
+    "id": "item-90",
+    "path": "HTML Practice/30task2.html",
+    "title": "CSS Flexbox Table & Box Shadow Matrix",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Data table enhanced with CSS box shadows, rounded cell borders, and flexbox wrapper for modern presentation.",
     "tags": [
-      "Tables",
-      "Responsive"
+      "Data Table",
+      "Box Shadow",
+      "Styling",
+      "CSS"
     ],
     "icon": "file-text",
-    "size_bytes": 2532,
-    "featured": false
-  },
-  {
-    "id": "item-132",
-    "path": "HTML Practice/timetable-c.html",
-    "title": "Class Timetable",
-    "category": "HTML Practice Labs",
-    "main_group": "HTML Practice",
-    "folder": "HTML Practice",
-    "description": "Comprehensive semester schedule matrix with period timings, lab slots, and subject codes.",
-    "tags": [
-      "Tables",
-      "Responsive"
-    ],
-    "icon": "file-text",
-    "size_bytes": 3240,
-    "featured": false
-  },
-  {
-    "id": "item-114",
-    "path": "HTML Practice/newtimetab.html",
-    "title": "Class Timetable 2.0",
-    "category": "HTML Practice Labs",
-    "main_group": "HTML Practice",
-    "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Tables",
-      "Responsive"
-    ],
-    "icon": "file-text",
-    "size_bytes": 2661,
-    "featured": false
-  },
-  {
-    "id": "item-92",
-    "path": "HTML Practice/all input tag.html",
-    "title": "Comprehensive HTML5 Input Form Controls",
-    "category": "HTML Practice Labs",
-    "main_group": "HTML Practice",
-    "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "file-text",
-    "size_bytes": 534,
-    "featured": false
-  },
-  {
-    "id": "item-100",
-    "path": "HTML Practice/form.html",
-    "title": "DOCUMENTATION",
-    "category": "HTML Practice Labs",
-    "main_group": "HTML Practice",
-    "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "file-text",
-    "size_bytes": 2648,
+    "size_bytes": 1328,
     "featured": false
   },
   {
     "id": "item-99",
     "path": "HTML Practice/day.html",
-    "title": "Day/Date Calendar Schedule Widget",
+    "title": "Calendar Day & Schedule Card Interface",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Minimalist card layout displaying daily schedule agenda, date badge, and reminder notes.",
     "tags": [
-      "Responsive"
+      "Calendar",
+      "Schedule",
+      "Cards",
+      "UI Design"
     ],
     "icon": "file-text",
     "size_bytes": 1396,
     "featured": false
   },
   {
-    "id": "item-105",
-    "path": "HTML Practice/image.html",
-    "title": "Document image",
+    "id": "item-117",
+    "path": "HTML Practice/pabi.html",
+    "title": "Clean Minimalist User Login Card",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Compact authentication box with username and password input styling, green submit button, and centered screen alignment.",
     "tags": [
-      "Responsive"
+      "Forms",
+      "Login",
+      "Minimalist",
+      "Auth"
     ],
     "icon": "file-text",
-    "size_bytes": 23599,
+    "size_bytes": 497,
+    "featured": false
+  },
+  {
+    "id": "item-113",
+    "path": "HTML Practice/newhard.html",
+    "title": "Complex Flexbox Grid & Period Matrix Routine",
+    "category": "HTML Practice Labs",
+    "main_group": "HTML Practice",
+    "folder": "HTML Practice",
+    "description": "Advanced timetable layout organizing lecture periods, lab hours, and subject schedules using HTML table semantics.",
+    "tags": [
+      "Data Table",
+      "Timetable",
+      "Academic",
+      "Schedule"
+    ],
+    "icon": "file-text",
+    "size_bytes": 3659,
+    "featured": false
+  },
+  {
+    "id": "item-102",
+    "path": "HTML Practice/form3.html",
+    "title": "Comprehensive Student Survey & Questionnaire Form",
+    "category": "HTML Practice Labs",
+    "main_group": "HTML Practice",
+    "folder": "HTML Practice",
+    "description": "Extensive academic questionnaire form with checkboxes, multi-option selects, rating scales, and open-ended feedback areas.",
+    "tags": [
+      "Forms",
+      "Survey",
+      "Questionnaire",
+      "Inputs"
+    ],
+    "icon": "file-text",
+    "size_bytes": 3723,
+    "featured": false
+  },
+  {
+    "id": "item-107",
+    "path": "HTML Practice/lenka.html",
+    "title": "Custom Browser New Tab Landing Page",
+    "category": "HTML Practice Labs",
+    "main_group": "HTML Practice",
+    "folder": "HTML Practice",
+    "description": "Clean browser new tab page layout with background wallpaper container, search prompt, and quick access bookmarks.",
+    "tags": [
+      "New Tab",
+      "Landing Page",
+      "Dashboard",
+      "Utility"
+    ],
+    "icon": "file-text",
+    "size_bytes": 868,
+    "featured": false
+  },
+  {
+    "id": "item-118",
+    "path": "HTML Practice/pabitra.html",
+    "title": "Developer Authentication & Login Portal",
+    "category": "HTML Practice Labs",
+    "main_group": "HTML Practice",
+    "folder": "HTML Practice",
+    "description": "Clean sky-blue themed user login form with centered container, rounded input borders, and hover button transitions.",
+    "tags": [
+      "Forms",
+      "Login Portal",
+      "Themed UI",
+      "Auth"
+    ],
+    "icon": "file-text",
+    "size_bytes": 1833,
     "featured": false
   },
   {
     "id": "item-116",
     "path": "HTML Practice/optfrm.html",
-    "title": "Dropdown Select & Option Controls",
+    "title": "Dropdown Selection Menu & `<optgroup>` Form Controls",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Form control demonstration organizing options into grouped `<optgroup>` categories for university branch selection.",
     "tags": [
-      "Responsive"
+      "Forms",
+      "Select Dropdown",
+      "Optgroup",
+      "Controls"
     ],
     "icon": "file-text",
     "size_bytes": 1934,
     "featured": false
   },
   {
-    "id": "item-101",
-    "path": "HTML Practice/form2.html",
-    "title": "Form2",
+    "id": "item-130",
+    "path": "HTML Practice/textarea.html",
+    "title": "Expandable Multi-Line Textarea & Message Input",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Form control demonstration showcasing `<textarea>` rows, columns, placeholder texts, and message submission layout.",
     "tags": [
       "Forms",
-      "Responsive"
+      "Textarea",
+      "Input Controls",
+      "Message Box"
     ],
     "icon": "file-text",
-    "size_bytes": 1416,
+    "size_bytes": 855,
     "featured": false
   },
   {
-    "id": "item-110",
-    "path": "HTML Practice/new.html",
-    "title": "Google form!",
+    "id": "item-100",
+    "path": "HTML Practice/form.html",
+    "title": "Google Account Registration & Feedback Form",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Google-inspired registration form layout with user credential fields, validation attributes, and account setup guidelines.",
     "tags": [
-      "Tables",
-      "Responsive"
+      "Forms",
+      "Registration",
+      "Validation",
+      "Inputs"
     ],
     "icon": "file-text",
-    "size_bytes": 1352,
+    "size_bytes": 2648,
     "featured": false
   },
   {
-    "id": "item-94",
-    "path": "HTML Practice/bgtext.html",
-    "title": "Gradient Background & Clipped Text",
+    "id": "item-115",
+    "path": "HTML Practice/newtitl.html",
+    "title": "Gradient Header Titles with Glowing Accent Underline",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Decorative title design utilizing CSS linear gradient text, text-shadow glows, and stylized bottom border bars.",
     "tags": [
-      "Responsive"
+      "Typography",
+      "Gradients",
+      "Headings",
+      "Visual FX"
     ],
     "icon": "file-text",
-    "size_bytes": 402,
+    "size_bytes": 328,
     "featured": false
   },
   {
-    "id": "item-122",
-    "path": "HTML Practice/sunew.html",
-    "title": "HTML CLASS",
+    "id": "item-123",
+    "path": "HTML Practice/table.html",
+    "title": "HTML Data Table with Borders & Cell Padding",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Fundamental data table exercise illustrating `<th>`, `<tr>`, `<td>`, border spacing, and cell padding attributes.",
     "tags": [
-      "Responsive"
+      "Data Table",
+      "Table Basics",
+      "HTML Fundamentals",
+      "Data"
     ],
     "icon": "file-text",
-    "size_bytes": 498,
+    "size_bytes": 1024,
+    "featured": false
+  },
+  {
+    "id": "item-92",
+    "path": "HTML Practice/all input tag.html",
+    "title": "HTML5 Form Input Controls Master Laboratory",
+    "category": "HTML Practice Labs",
+    "main_group": "HTML Practice",
+    "folder": "HTML Practice",
+    "description": "Complete showcase of every standard HTML5 input element: color picker, date/time, range slider, file, tel, and search.",
+    "tags": [
+      "HTML5 Inputs",
+      "Form Controls",
+      "Lab",
+      "Cheatsheet"
+    ],
+    "icon": "file-text",
+    "size_bytes": 534,
+    "featured": false
+  },
+  {
+    "id": "item-128",
+    "path": "HTML Practice/task 4.html",
+    "title": "HTML5 Multimedia & Formatting Demonstration",
+    "category": "HTML Practice Labs",
+    "main_group": "HTML Practice",
+    "folder": "HTML Practice",
+    "description": "Comprehensive page incorporating embedded audio, video player, image gallery, data tables, and rich text formatting.",
+    "tags": [
+      "Multimedia",
+      "HTML5 Tags",
+      "Rich Media",
+      "Showcase"
+    ],
+    "icon": "file-text",
+    "size_bytes": 2528,
     "featured": false
   },
   {
     "id": "item-98",
     "path": "HTML Practice/data.html",
-    "title": "HTML5 Data Attributes & Semantic Data",
+    "title": "HTML5 Semantic `<data>` & `<meter>` Attributes Lab",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Practical demonstration utilizing machine-readable HTML5 data attributes, custom data-* properties, and gauge meters.",
     "tags": [
-      "Tables",
-      "Responsive"
+      "HTML5",
+      "Data Attributes",
+      "Semantics",
+      "Accessibility"
     ],
     "icon": "file-text",
     "size_bytes": 905,
@@ -990,78 +1128,195 @@
   {
     "id": "item-111",
     "path": "HTML Practice/new_heart.html",
-    "title": "Handy AI \u2013 Gesture Experience",
+    "title": "Handy AI \u2014 MediaPipe Computer Vision & Hand Gesture Experience",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Cutting-edge computer vision app using MediaPipe hand tracking to create reactive particle trails and gesture interactions.",
     "tags": [
+      "Playable",
+      "AI / Vision",
       "JavaScript",
-      "HTML5 Canvas",
-      "Animation",
-      "Responsive"
+      "Canvas"
     ],
     "icon": "file-text",
     "size_bytes": 20130,
     "featured": false
   },
   {
-    "id": "item-127",
-    "path": "HTML Practice/task 2.html",
-    "title": "LIST TAG!",
+    "id": "item-106",
+    "path": "HTML Practice/ind.html",
+    "title": "Hero Section Banner with Call-To-Action Highlights",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Web hero banner layout with prominent headline typography, subtitle description, and action buttons.",
     "tags": [
-      "Responsive"
+      "Hero Section",
+      "Banner",
+      "Layout",
+      "CTA"
+    ],
+    "icon": "file-text",
+    "size_bytes": 357,
+    "featured": false
+  },
+  {
+    "id": "item-93",
+    "path": "HTML Practice/anchor.html",
+    "title": "Hyperlink Navigation & Internal Page Anchors Lab",
+    "category": "HTML Practice Labs",
+    "main_group": "HTML Practice",
+    "folder": "HTML Practice",
+    "description": "Demonstration of HTML hyperlink attributes, external target protocols, tel/mailto schemes, and internal section jumps.",
+    "tags": [
+      "Links",
+      "Anchors",
+      "Navigation",
+      "HTML Fundamentals"
+    ],
+    "icon": "file-text",
+    "size_bytes": 632,
+    "featured": false
+  },
+  {
+    "id": "item-121",
+    "path": "HTML Practice/sp.html",
+    "title": "Inline Text Span Highlights & Badge Accents Lab",
+    "category": "HTML Practice Labs",
+    "main_group": "HTML Practice",
+    "folder": "HTML Practice",
+    "description": "Demonstration using `<span>` tags to apply localized background highlights, pill badges, and contrasting font weights.",
+    "tags": [
+      "Typography",
+      "Span Highlights",
+      "Badges",
+      "HTML Basics"
+    ],
+    "icon": "file-text",
+    "size_bytes": 2527,
+    "featured": false
+  },
+  {
+    "id": "item-110",
+    "path": "HTML Practice/new.html",
+    "title": "Modern Web Typography & Document Styling Template",
+    "category": "HTML Practice Labs",
+    "main_group": "HTML Practice",
+    "folder": "HTML Practice",
+    "description": "Clean starting template incorporating modern CSS resets, typographic hierarchy, responsive body margins, and heading styles.",
+    "tags": [
+      "Typography",
+      "CSS Reset",
+      "Boilerplate",
+      "HTML"
+    ],
+    "icon": "file-text",
+    "size_bytes": 1352,
+    "featured": false
+  },
+  {
+    "id": "item-127",
+    "path": "HTML Practice/task 2.html",
+    "title": "Nested Navigation Menu & Breadcrumb Trail",
+    "category": "HTML Practice Labs",
+    "main_group": "HTML Practice",
+    "folder": "HTML Practice",
+    "description": "Navigation interface showcasing nested list items styled as an interactive multi-level hierarchy.",
+    "tags": [
+      "Navigation",
+      "Lists",
+      "Breadcrumbs",
+      "Structure"
     ],
     "icon": "file-text",
     "size_bytes": 880,
     "featured": false
   },
   {
-    "id": "item-117",
-    "path": "HTML Practice/pabi.html",
-    "title": "Login Dashboard",
+    "id": "item-108",
+    "path": "HTML Practice/list.html",
+    "title": "Nested Ordered, Unordered, & Definition Lists Lab",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Comprehensive exploration of HTML list types, ordered number styling, disc/circle bullets, and `<dl>` terms and descriptions.",
     "tags": [
-      "Forms",
-      "Responsive"
+      "Lists",
+      "Definition List",
+      "Semantics",
+      "HTML Basics"
     ],
     "icon": "file-text",
-    "size_bytes": 497,
+    "size_bytes": 816,
     "featured": false
   },
   {
-    "id": "item-118",
-    "path": "HTML Practice/pabitra.html",
-    "title": "Login Dashboard",
+    "id": "item-129",
+    "path": "HTML Practice/task.html",
+    "title": "Personal Developer Profile & Skills Portfolio",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Introductory developer profile web page featuring personal photo placeholder, educational qualifications, and project links.",
     "tags": [
-      "Forms",
-      "Responsive"
+      "Portfolio",
+      "Developer Profile",
+      "Personal",
+      "Resume"
     ],
     "icon": "file-text",
-    "size_bytes": 1833,
+    "size_bytes": 1224,
+    "featured": false
+  },
+  {
+    "id": "item-124",
+    "path": "HTML Practice/table2.0.html",
+    "title": "Project Task History & Progress Data Table",
+    "category": "HTML Practice Labs",
+    "main_group": "HTML Practice",
+    "folder": "HTML Practice",
+    "description": "Project management task ledger table recording task names, execution statuses, dates, and completion milestones.",
+    "tags": [
+      "Data Table",
+      "Task History",
+      "Project Mgmt",
+      "Ledger"
+    ],
+    "icon": "file-text",
+    "size_bytes": 2796,
+    "featured": false
+  },
+  {
+    "id": "item-101",
+    "path": "HTML Practice/form2.html",
+    "title": "Radio Button Gender Selection & Validation Form",
+    "category": "HTML Practice Labs",
+    "main_group": "HTML Practice",
+    "folder": "HTML Practice",
+    "description": "Targeted form exercise focusing on grouped radio button mechanics, label associations, and mutually exclusive selection.",
+    "tags": [
+      "Forms",
+      "Radio Buttons",
+      "Validation",
+      "Inputs"
+    ],
+    "icon": "file-text",
+    "size_bytes": 1416,
     "featured": false
   },
   {
     "id": "item-119",
     "path": "HTML Practice/page.html",
-    "title": "Login Dashboard",
+    "title": "Responsive Admin Login Dashboard Screen",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Full-height login dashboard screen incorporating clean CSS form styles, placeholder labels, and responsive layout.",
     "tags": [
       "Forms",
+      "Login Dashboard",
+      "Admin",
       "Responsive"
     ],
     "icon": "file-text",
@@ -1069,29 +1324,53 @@
     "featured": false
   },
   {
-    "id": "item-130",
-    "path": "HTML Practice/textarea.html",
-    "title": "Multi-line Textarea Form Input",
+    "id": "item-105",
+    "path": "HTML Practice/image.html",
+    "title": "Responsive Figure Elements & Image Captions Lab",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Showcase of semantic `<figure>` and `<figcaption>` elements with responsive image scaling and aspect ratio maintenance.",
     "tags": [
+      "Images",
+      "Figure / Caption",
+      "Media",
       "Responsive"
     ],
     "icon": "file-text",
-    "size_bytes": 855,
+    "size_bytes": 23599,
+    "featured": false
+  },
+  {
+    "id": "item-88",
+    "path": "HTML Practice/12task2.html",
+    "title": "Responsive Mobile-Adaptive Data Table",
+    "category": "HTML Practice Labs",
+    "main_group": "HTML Practice",
+    "folder": "HTML Practice",
+    "description": "Data table styled with responsive CSS to ensure clean horizontal scrolling and readable text on mobile screens.",
+    "tags": [
+      "Data Table",
+      "Responsive",
+      "Mobile-Friendly",
+      "CSS"
+    ],
+    "icon": "file-text",
+    "size_bytes": 1958,
     "featured": false
   },
   {
     "id": "item-133",
     "path": "HTML Practice/web.html",
-    "title": "My Personal Web Page",
+    "title": "Responsive Personal Portfolio & Project Hub",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Multi-section developer portfolio featuring about me bio, project showcase links, skills grid, and contact details.",
     "tags": [
+      "Portfolio",
+      "Personal Hub",
+      "Projects",
       "Responsive"
     ],
     "icon": "file-text",
@@ -1099,156 +1378,126 @@
     "featured": false
   },
   {
-    "id": "item-107",
-    "path": "HTML Practice/lenka.html",
-    "title": "New Tab",
-    "category": "HTML Practice Labs",
-    "main_group": "HTML Practice",
-    "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "JavaScript",
-      "Responsive"
-    ],
-    "icon": "file-text",
-    "size_bytes": 868,
-    "featured": false
-  },
-  {
-    "id": "item-102",
-    "path": "HTML Practice/form3.html",
-    "title": "Registration Form",
-    "category": "HTML Practice Labs",
-    "main_group": "HTML Practice",
-    "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Forms",
-      "Responsive"
-    ],
-    "icon": "file-text",
-    "size_bytes": 3723,
-    "featured": false
-  },
-  {
     "id": "item-104",
     "path": "HTML Practice/icon.html",
-    "title": "SVG & Icon Font Integration",
+    "title": "SVG Vector Icons & Icon Font Integration Lab",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Laboratory demonstrating inline SVG graphics, scalable vector icons, color fills, and responsive sizing.",
     "tags": [
-      "Responsive"
+      "SVG Icons",
+      "Vector",
+      "Graphics",
+      "UI Elements"
     ],
     "icon": "file-text",
     "size_bytes": 440,
     "featured": false
   },
   {
-    "id": "item-103",
-    "path": "HTML Practice/hardtask.html",
-    "title": "Schedule Table",
+    "id": "item-126",
+    "path": "HTML Practice/task 1.html",
+    "title": "Semantic Web Page Architecture (Header, Article, Aside)",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Educational web page demonstrating semantic HTML5 structure with header, navigation bar, article content, and sidebar aside.",
     "tags": [
-      "Tables",
-      "Responsive"
+      "Semantic HTML",
+      "Architecture",
+      "HTML5",
+      "Layout"
     ],
     "icon": "file-text",
-    "size_bytes": 3280,
+    "size_bytes": 2527,
     "featured": false
   },
   {
-    "id": "item-115",
-    "path": "HTML Practice/newtitl.html",
-    "title": "Stylized Header Titles & Badges",
+    "id": "item-114",
+    "path": "HTML Practice/newtimetab.html",
+    "title": "Semester Class Timetable & Lab Slot Matrix",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Engineering college routine matrix organizing daily theory classes, lab batches, and lunch intervals across the week.",
     "tags": [
-      "Responsive"
+      "Data Table",
+      "Timetable",
+      "Engineering",
+      "Academic"
     ],
     "icon": "file-text",
-    "size_bytes": 328,
+    "size_bytes": 2661,
     "featured": false
   },
   {
-    "id": "item-96",
-    "path": "HTML Practice/center.html",
-    "title": "Suraj Bhai",
+    "id": "item-95",
+    "path": "HTML Practice/blockqt.html",
+    "title": "Stylized Blockquotes & Pull Citations Showcase",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Typographical design demonstration styling HTML blockquote elements with decorative quotation marks and author citations.",
     "tags": [
-      "Responsive"
+      "Typography",
+      "Blockquote",
+      "Styling",
+      "HTML Basics"
     ],
     "icon": "file-text",
-    "size_bytes": 253,
+    "size_bytes": 608,
     "featured": false
   },
   {
-    "id": "item-124",
-    "path": "HTML Practice/table2.0.html",
-    "title": "TASK HISTORY",
+    "id": "item-122",
+    "path": "HTML Practice/sunew.html",
+    "title": "Tech Professional Bio & Profile Card ('Babu Tech')",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Personal developer introductory card with biographical summary, skills overview, and heading styling.",
     "tags": [
-      "Tables",
-      "Responsive"
+      "Profile",
+      "Bio Card",
+      "Personal",
+      "Showcase"
     ],
     "icon": "file-text",
-    "size_bytes": 2796,
+    "size_bytes": 498,
     "featured": false
   },
   {
-    "id": "item-129",
-    "path": "HTML Practice/task.html",
-    "title": "TECH TASK",
+    "id": "item-125",
+    "path": "HTML Practice/table2.html",
+    "title": "University Department Course Curriculum Table",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Curriculum outline table detailing semester subjects, credit hours, prerequisites, and syllabus distribution.",
     "tags": [
-      "Responsive"
+      "Data Table",
+      "Curriculum",
+      "Academic",
+      "Courses"
     ],
     "icon": "file-text",
-    "size_bytes": 1224,
-    "featured": false
-  },
-  {
-    "id": "item-123",
-    "path": "HTML Practice/table.html",
-    "title": "Table",
-    "category": "HTML Practice Labs",
-    "main_group": "HTML Practice",
-    "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Tables",
-      "Responsive"
-    ],
-    "icon": "file-text",
-    "size_bytes": 1024,
+    "size_bytes": 3243,
     "featured": false
   },
   {
     "id": "item-89",
     "path": "HTML Practice/30task1.html",
-    "title": "User Personal Information 2.0",
+    "title": "User Information & Registration Form 2.0",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Comprehensive personal registration interface with grouped form fields, validation attributes, and clean button styles.",
     "tags": [
       "Forms",
-      "Responsive"
+      "Registration",
+      "Validation",
+      "Inputs"
     ],
     "icon": "file-text",
     "size_bytes": 1782,
@@ -1257,909 +1506,880 @@
   {
     "id": "item-112",
     "path": "HTML Practice/newfont.html",
-    "title": "Web Typography & Custom Font Stacks",
+    "title": "Web Font Pairing & Heart Emoji Styling Lab",
     "category": "HTML Practice Labs",
     "main_group": "HTML Practice",
     "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
+    "description": "Typography experiment pairing custom web fonts with inline Unicode heart emojis and decorative text styling.",
     "tags": [
-      "Responsive"
+      "Typography",
+      "Web Fonts",
+      "Emojis",
+      "Text FX"
     ],
     "icon": "file-text",
     "size_bytes": 444,
     "featured": false
   },
   {
-    "id": "item-113",
-    "path": "HTML Practice/newhard.html",
-    "title": "new table",
-    "category": "HTML Practice Labs",
-    "main_group": "HTML Practice",
-    "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Tables",
-      "Responsive"
-    ],
-    "icon": "file-text",
-    "size_bytes": 3659,
-    "featured": false
-  },
-  {
-    "id": "item-108",
-    "path": "HTML Practice/list.html",
-    "title": "order list",
-    "category": "HTML Practice Labs",
-    "main_group": "HTML Practice",
-    "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "file-text",
-    "size_bytes": 816,
-    "featured": false
-  },
-  {
-    "id": "item-106",
-    "path": "HTML Practice/ind.html",
-    "title": "pabitra",
-    "category": "HTML Practice Labs",
-    "main_group": "HTML Practice",
-    "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "file-text",
-    "size_bytes": 357,
-    "featured": false
-  },
-  {
-    "id": "item-90",
-    "path": "HTML Practice/30task2.html",
-    "title": "table",
-    "category": "HTML Practice Labs",
-    "main_group": "HTML Practice",
-    "folder": "HTML Practice",
-    "description": "Clean, responsive html practice labs implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Tables",
-      "Responsive"
-    ],
-    "icon": "file-text",
-    "size_bytes": 1328,
-    "featured": false
-  },
-  {
-    "id": "item-2",
-    "path": "CSS/css-components-main/accordions/accordion-1/index.html",
-    "title": "Accordions",
-    "category": "UI: Accordions",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: accordions implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1337,
-    "featured": false
-  },
-  {
     "id": "item-17",
     "path": "CSS/css-components-main/footers/footer-1/index.html",
-    "title": "Animation 1",
+    "title": "Animated Vector Wave SVG Footer",
     "category": "UI: Footers",
     "main_group": "UI Components",
     "folder": "CSS",
-    "description": "Clean, responsive ui: footers implementation built with semantic HTML & modern CSS.",
+    "description": "Creative website footer featuring multi-layer SVG animated ocean waves that gently oscillate across the bottom.",
     "tags": [
-      "Responsive"
+      "Footers",
+      "SVG Animation",
+      "Waves",
+      "Creative"
     ],
     "icon": "palette",
     "size_bytes": 3525,
     "featured": false
   },
   {
-    "id": "item-25",
-    "path": "CSS/css-components-main/footers/footer-7/index.html",
-    "title": "Animation 1",
+    "id": "item-23",
+    "path": "CSS/css-components-main/footers/footer-5/index.html",
+    "title": "Brand Identity & Product Links Footer",
     "category": "UI: Footers",
     "main_group": "UI Components",
     "folder": "CSS",
-    "description": "Clean, responsive ui: footers implementation built with semantic HTML & modern CSS.",
+    "description": "Clean brand footer featuring high-contrast logo typography, mission statement, compliance certifications, and legal links.",
     "tags": [
-      "Responsive"
+      "Footers",
+      "Brand Identity",
+      "Legal",
+      "Clean UI"
     ],
     "icon": "palette",
-    "size_bytes": 3522,
-    "featured": false
-  },
-  {
-    "id": "item-37",
-    "path": "CSS/css-components-main/logins/login-6/index.html",
-    "title": "Animation 1",
-    "category": "UI: Logins",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: logins implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Forms",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 3698,
-    "featured": false
-  },
-  {
-    "id": "item-5",
-    "path": "CSS/css-components-main/cards/card-2/index.html",
-    "title": "Card 2",
-    "category": "UI: Cards",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: cards implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 2580,
-    "featured": false
-  },
-  {
-    "id": "item-6",
-    "path": "CSS/css-components-main/cards/card-3/index.html",
-    "title": "Cards",
-    "category": "UI: Cards",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: cards implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1820,
-    "featured": false
-  },
-  {
-    "id": "item-7",
-    "path": "CSS/css-components-main/cards/card-4/index.html",
-    "title": "Cards",
-    "category": "UI: Cards",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: cards implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1499,
-    "featured": false
-  },
-  {
-    "id": "item-8",
-    "path": "CSS/css-components-main/cards/card-7/index.html",
-    "title": "Cards",
-    "category": "UI: Cards",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: cards implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1487,
-    "featured": false
-  },
-  {
-    "id": "item-9",
-    "path": "CSS/css-components-main/cards/card-8/index.html",
-    "title": "Cards",
-    "category": "UI: Cards",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: cards implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1632,
-    "featured": false
-  },
-  {
-    "id": "item-10",
-    "path": "CSS/css-components-main/cards/card-9/index.html",
-    "title": "Cards",
-    "category": "UI: Cards",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: cards implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "JavaScript",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1841,
-    "featured": false
-  },
-  {
-    "id": "item-36",
-    "path": "CSS/css-components-main/logins/login-5/index.html",
-    "title": "Cards",
-    "category": "UI: Logins",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: logins implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Forms",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1371,
-    "featured": false
-  },
-  {
-    "id": "item-11",
-    "path": "CSS/css-components-main/carousels/carousel-2/index.html",
-    "title": "Carousel 2",
-    "category": "UI: Carousels",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: carousels implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1248,
+    "size_bytes": 4548,
     "featured": false
   },
   {
     "id": "item-1",
     "path": "CSS/1st.html",
-    "title": "Core CSS Styling Foundations",
+    "title": "CSS Core Styling & Selectors Foundation Lab",
     "category": "CSS Styling",
     "main_group": "UI Components",
     "folder": "CSS",
-    "description": "Clean, responsive css styling implementation built with semantic HTML & modern CSS.",
+    "description": "Foundational demonstration of CSS color palettes, font stacks, element selectors, and basic cascade rules.",
     "tags": [
-      "Responsive"
+      "CSS Basics",
+      "Selectors",
+      "Typography",
+      "Colors"
     ],
     "icon": "palette",
     "size_bytes": 4096,
     "featured": false
   },
   {
-    "id": "item-13",
-    "path": "CSS/css-components-main/dropdowns/dropdown-1/index.html",
-    "title": "Dropdowns",
-    "category": "UI: Dropdowns",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: dropdowns implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 3506,
-    "featured": false
-  },
-  {
-    "id": "item-14",
-    "path": "CSS/css-components-main/dropdowns/dropdown-2/index.html",
-    "title": "Dropdowns",
-    "category": "UI: Dropdowns",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: dropdowns implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1412,
-    "featured": false
-  },
-  {
-    "id": "item-15",
-    "path": "CSS/css-components-main/dropdowns/dropdown-3/index copy.html",
-    "title": "Dropdowns",
-    "category": "UI: Dropdowns",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: dropdowns implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 2994,
-    "featured": false
-  },
-  {
-    "id": "item-16",
-    "path": "CSS/css-components-main/dropdowns/dropdown-3/index.html",
-    "title": "Dropdowns",
-    "category": "UI: Dropdowns",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: dropdowns implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 2763,
-    "featured": false
-  },
-  {
-    "id": "item-18",
-    "path": "CSS/css-components-main/footers/footer-10/index.html",
-    "title": "Footers",
-    "category": "UI: Footers",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: footers implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 4548,
-    "featured": false
-  },
-  {
-    "id": "item-19",
-    "path": "CSS/css-components-main/footers/footer-11/index.html",
-    "title": "Footers",
-    "category": "UI: Footers",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: footers implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 3347,
-    "featured": false
-  },
-  {
     "id": "item-20",
     "path": "CSS/css-components-main/footers/footer-2/index.html",
-    "title": "Footers",
+    "title": "Call-to-Action Free Trial Conversion Footer",
     "category": "UI: Footers",
     "main_group": "UI Components",
     "folder": "CSS",
-    "description": "Clean, responsive ui: footers implementation built with semantic HTML & modern CSS.",
+    "description": "Pre-footer conversion banner urging visitors to start a free trial, flanked by company links and copyright notice.",
     "tags": [
-      "Responsive"
+      "Footers",
+      "CTA Banner",
+      "Conversion",
+      "SaaS"
     ],
     "icon": "palette",
     "size_bytes": 2397,
     "featured": false
   },
   {
-    "id": "item-21",
-    "path": "CSS/css-components-main/footers/footer-3/index.html",
-    "title": "Footers",
-    "category": "UI: Footers",
+    "id": "item-15",
+    "path": "CSS/css-components-main/dropdowns/dropdown-3/index copy.html",
+    "title": "Categorized Command Palette Dropdown Menu",
+    "category": "UI: Dropdowns",
     "main_group": "UI Components",
     "folder": "CSS",
-    "description": "Clean, responsive ui: footers implementation built with semantic HTML & modern CSS.",
+    "description": "Versatile command palette dropdown with grouped action sections, icon prefixes, and subtle shadow elevation.",
     "tags": [
-      "Responsive"
+      "Dropdown",
+      "Command Menu",
+      "Navigation",
+      "Icons"
     ],
     "icon": "palette",
-    "size_bytes": 2713,
-    "featured": false
-  },
-  {
-    "id": "item-22",
-    "path": "CSS/css-components-main/footers/footer-4/index.html",
-    "title": "Footers",
-    "category": "UI: Footers",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: footers implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 2552,
-    "featured": false
-  },
-  {
-    "id": "item-23",
-    "path": "CSS/css-components-main/footers/footer-5/index.html",
-    "title": "Footers",
-    "category": "UI: Footers",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: footers implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 4548,
-    "featured": false
-  },
-  {
-    "id": "item-24",
-    "path": "CSS/css-components-main/footers/footer-6/index.html",
-    "title": "Footers",
-    "category": "UI: Footers",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: footers implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 2077,
-    "featured": false
-  },
-  {
-    "id": "item-26",
-    "path": "CSS/css-components-main/footers/footer-8/index.html",
-    "title": "Footers",
-    "category": "UI: Footers",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: footers implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 2645,
-    "featured": false
-  },
-  {
-    "id": "item-27",
-    "path": "CSS/css-components-main/footers/footer-9/index.html",
-    "title": "Footers",
-    "category": "UI: Footers",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: footers implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 2194,
-    "featured": false
-  },
-  {
-    "id": "item-40",
-    "path": "CSS/css-components-main/logins/login-9/index.html",
-    "title": "Login",
-    "category": "UI: Logins",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: logins implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Forms",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1368,
-    "featured": false
-  },
-  {
-    "id": "item-33",
-    "path": "CSS/css-components-main/logins/login-2/index.html",
-    "title": "Logins",
-    "category": "UI: Logins",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: logins implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Forms",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 891,
-    "featured": false
-  },
-  {
-    "id": "item-34",
-    "path": "CSS/css-components-main/logins/login-3/index.html",
-    "title": "Logins",
-    "category": "UI: Logins",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: logins implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Forms",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1049,
-    "featured": false
-  },
-  {
-    "id": "item-35",
-    "path": "CSS/css-components-main/logins/login-4/index.html",
-    "title": "Logins",
-    "category": "UI: Logins",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: logins implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Forms",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1385,
-    "featured": false
-  },
-  {
-    "id": "item-38",
-    "path": "CSS/css-components-main/logins/login-7/index.html",
-    "title": "Logins",
-    "category": "UI: Logins",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: logins implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Forms",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1938,
-    "featured": false
-  },
-  {
-    "id": "item-39",
-    "path": "CSS/css-components-main/logins/login-8/index.html",
-    "title": "Logins",
-    "category": "UI: Logins",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: logins implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Forms",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1787,
-    "featured": false
-  },
-  {
-    "id": "item-60",
-    "path": "CSS/css-components-main/signups/signup-2/index.html",
-    "title": "Logins",
-    "category": "UI: Signups",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: signups implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Forms",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1078,
-    "featured": false
-  },
-  {
-    "id": "item-43",
-    "path": "CSS/css-components-main/menus/menu-3/index.html",
-    "title": "Menu 2",
-    "category": "UI: Menus",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: menus implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "JavaScript",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1212,
-    "featured": false
-  },
-  {
-    "id": "item-41",
-    "path": "CSS/css-components-main/menus/menu-1/index.html",
-    "title": "Menus",
-    "category": "UI: Menus",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: menus implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "JavaScript",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1111,
-    "featured": false
-  },
-  {
-    "id": "item-42",
-    "path": "CSS/css-components-main/menus/menu-2/index.html",
-    "title": "Menus",
-    "category": "UI: Menus",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: menus implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "JavaScript",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1175,
-    "featured": false
-  },
-  {
-    "id": "item-45",
-    "path": "CSS/css-components-main/navbars/navbar-2/index.html",
-    "title": "Navbars",
-    "category": "UI: Navbars",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: navbars implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1905,
-    "featured": false
-  },
-  {
-    "id": "item-46",
-    "path": "CSS/css-components-main/navbars/navbar-3/index.html",
-    "title": "Navbars",
-    "category": "UI: Navbars",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: navbars implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "JavaScript",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1618,
+    "size_bytes": 2994,
     "featured": false
   },
   {
     "id": "item-47",
     "path": "CSS/css-components-main/navbars/navbar-4/index.html",
-    "title": "Navbars",
+    "title": "Centered Navigation Links Header with Auth Buttons",
     "category": "UI: Navbars",
     "main_group": "UI Components",
     "folder": "CSS",
-    "description": "Clean, responsive ui: navbars implementation built with semantic HTML & modern CSS.",
+    "description": "Symmetric navbar design with centered category links, left-aligned brand logo, and right-aligned sign-in options.",
     "tags": [
-      "Responsive"
+      "Navbars",
+      "Centered Nav",
+      "Auth Buttons",
+      "Clean UI"
     ],
     "icon": "palette",
     "size_bytes": 894,
     "featured": false
   },
   {
-    "id": "item-48",
-    "path": "CSS/css-components-main/navbars/navbar-5/index.html",
-    "title": "Navbars",
-    "category": "UI: Navbars",
+    "id": "item-43",
+    "path": "CSS/css-components-main/menus/menu-3/index.html",
+    "title": "Circular Radial Floating Action Navigation Menu",
+    "category": "UI: Menus",
     "main_group": "UI Components",
     "folder": "CSS",
-    "description": "Clean, responsive ui: navbars implementation built with semantic HTML & modern CSS.",
+    "description": "Radial floating action button that blossoms into circular sub-navigation items with smooth rotation transitions.",
     "tags": [
-      "Responsive"
+      "Menu",
+      "Radial Nav",
+      "Floating Button",
+      "Animation"
     ],
     "icon": "palette",
-    "size_bytes": 1495,
-    "featured": false
-  },
-  {
-    "id": "item-49",
-    "path": "CSS/css-components-main/navbars/navbar-6/index.html",
-    "title": "Navbars",
-    "category": "UI: Navbars",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: navbars implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1326,
-    "featured": false
-  },
-  {
-    "id": "item-50",
-    "path": "CSS/css-components-main/navbars/navbar-7/index.html",
-    "title": "Navbars",
-    "category": "UI: Navbars",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: navbars implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1905,
-    "featured": false
-  },
-  {
-    "id": "item-51",
-    "path": "CSS/css-components-main/parallax/parallax-1/index.html",
-    "title": "Parallax",
-    "category": "UI: Parallax",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: parallax implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 2008,
-    "featured": false
-  },
-  {
-    "id": "item-65",
-    "path": "CSS/img13.html",
-    "title": "Responsive Gallery Grid Showcase",
-    "category": "CSS Styling",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive css styling implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 471,
-    "featured": false
-  },
-  {
-    "id": "item-52",
-    "path": "CSS/css-components-main/sidebars/sidebar-1/index.html",
-    "title": "Sidebars",
-    "category": "UI: Sidebars",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: sidebars implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "JavaScript",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1361,
+    "size_bytes": 1212,
     "featured": false
   },
   {
     "id": "item-53",
     "path": "CSS/css-components-main/sidebars/sidebar-2/index.html",
-    "title": "Sidebars",
+    "title": "Collapsible Icon-Only Dock Navigation Sidebar",
     "category": "UI: Sidebars",
     "main_group": "UI Components",
     "folder": "CSS",
-    "description": "Clean, responsive ui: sidebars implementation built with semantic HTML & modern CSS.",
+    "description": "Space-saving vertical dock sidebar featuring tooltips on hover, active state pill markers, and system settings icon.",
     "tags": [
-      "JavaScript",
-      "Responsive"
+      "Sidebars",
+      "Icon Dock",
+      "Collapsible",
+      "Compact"
     ],
     "icon": "palette",
     "size_bytes": 3757,
     "featured": false
   },
   {
-    "id": "item-54",
-    "path": "CSS/css-components-main/sidebars/sidebar-3/index.html",
-    "title": "Sidebars",
-    "category": "UI: Sidebars",
+    "id": "item-26",
+    "path": "CSS/css-components-main/footers/footer-8/index.html",
+    "title": "Company Overview, Careers & Legal Footer",
+    "category": "UI: Footers",
     "main_group": "UI Components",
     "folder": "CSS",
-    "description": "Clean, responsive ui: sidebars implementation built with semantic HTML & modern CSS.",
+    "description": "Informational footer highlighting company history, open job listings badge, privacy policy, and cookie settings.",
     "tags": [
-      "JavaScript",
-      "Responsive"
+      "Footers",
+      "Careers",
+      "About Us",
+      "Company"
     ],
     "icon": "palette",
-    "size_bytes": 2415,
-    "featured": false
-  },
-  {
-    "id": "item-55",
-    "path": "CSS/css-components-main/sidebars/sidebar-4/index.html",
-    "title": "Sidebars",
-    "category": "UI: Sidebars",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: sidebars implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "JavaScript",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 3413,
-    "featured": false
-  },
-  {
-    "id": "item-56",
-    "path": "CSS/css-components-main/sidebars/sidebar-5/index.html",
-    "title": "Sidebars",
-    "category": "UI: Sidebars",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: sidebars implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "JavaScript",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 2418,
-    "featured": false
-  },
-  {
-    "id": "item-57",
-    "path": "CSS/css-components-main/sidebars/sidebar-6/index.html",
-    "title": "Sidebars",
-    "category": "UI: Sidebars",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: sidebars implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "JavaScript",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 2171,
-    "featured": false
-  },
-  {
-    "id": "item-58",
-    "path": "CSS/css-components-main/sidebars/sidebar-7/index.html",
-    "title": "Sidebars",
-    "category": "UI: Sidebars",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: sidebars implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "JavaScript",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 3430,
-    "featured": false
-  },
-  {
-    "id": "item-62",
-    "path": "CSS/css-components-main/signups/signup-4/index.html",
-    "title": "Sign Ups",
-    "category": "UI: Signups",
-    "main_group": "UI Components",
-    "folder": "CSS",
-    "description": "Clean, responsive ui: signups implementation built with semantic HTML & modern CSS.",
-    "tags": [
-      "Forms",
-      "Responsive"
-    ],
-    "icon": "palette",
-    "size_bytes": 1742,
+    "size_bytes": 2645,
     "featured": false
   },
   {
     "id": "item-59",
     "path": "CSS/css-components-main/signups/signup-1/index.html",
-    "title": "Signups",
+    "title": "Comprehensive Multi-Field Registration Form",
     "category": "UI: Signups",
     "main_group": "UI Components",
     "folder": "CSS",
-    "description": "Clean, responsive ui: signups implementation built with semantic HTML & modern CSS.",
+    "description": "Complete user onboarding form with full name, email, password strength meter, and terms of service acceptance checkbox.",
     "tags": [
-      "Forms",
-      "Responsive"
+      "Signups",
+      "Registration",
+      "Strength Meter",
+      "Forms"
     ],
     "icon": "palette",
     "size_bytes": 2111,
     "featured": false
   },
   {
-    "id": "item-61",
-    "path": "CSS/css-components-main/signups/signup-3/index.html",
-    "title": "Signups",
+    "id": "item-24",
+    "path": "CSS/css-components-main/footers/footer-6/index.html",
+    "title": "Corporate Enterprise Sitemap Footer",
+    "category": "UI: Footers",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Comprehensive corporate sitemap footer organizing global offices, investor relations, career openings, and language selector.",
+    "tags": [
+      "Footers",
+      "Corporate",
+      "Sitemap",
+      "Global"
+    ],
+    "icon": "palette",
+    "size_bytes": 2077,
+    "featured": false
+  },
+  {
+    "id": "item-10",
+    "path": "CSS/css-components-main/cards/card-9/index.html",
+    "title": "Creative Artist Portfolio Showcase Card (Alexe Milne)",
+    "category": "UI: Cards",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Designer portfolio showcase card with artwork preview, creator bio, follower counter, and hire button.",
+    "tags": [
+      "Cards",
+      "Portfolio",
+      "Creative",
+      "Artist"
+    ],
+    "icon": "palette",
+    "size_bytes": 1841,
+    "featured": false
+  },
+  {
+    "id": "item-27",
+    "path": "CSS/css-components-main/footers/footer-9/index.html",
+    "title": "Customer Support & Help Center Contact Footer",
+    "category": "UI: Footers",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Support-focused footer providing 24/7 help center links, live chat trigger, email support form, and community discord link.",
+    "tags": [
+      "Footers",
+      "Support",
+      "Help Center",
+      "Contact"
+    ],
+    "icon": "palette",
+    "size_bytes": 2194,
+    "featured": false
+  },
+  {
+    "id": "item-25",
+    "path": "CSS/css-components-main/footers/footer-7/index.html",
+    "title": "Dark Neon Glow Accent Footer",
+    "category": "UI: Footers",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Futuristic dark theme footer illuminated with glowing neon cyan border lines, dark glassmorphism, and icon links.",
+    "tags": [
+      "Footers",
+      "Neon Glow",
+      "Dark Theme",
+      "Visual FX"
+    ],
+    "icon": "palette",
+    "size_bytes": 3522,
+    "featured": false
+  },
+  {
+    "id": "item-34",
+    "path": "CSS/css-components-main/logins/login-3/index.html",
+    "title": "Dark Obsidian Authentication Portal",
+    "category": "UI: Logins",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Sleek dark theme sign-in interface designed with dark slate backgrounds, neon focus rings, and remember me checkbox.",
+    "tags": [
+      "Logins",
+      "Dark Mode",
+      "Obsidian",
+      "Sleek"
+    ],
+    "icon": "palette",
+    "size_bytes": 1049,
+    "featured": false
+  },
+  {
+    "id": "item-56",
+    "path": "CSS/css-components-main/sidebars/sidebar-5/index.html",
+    "title": "Datalens Business Intelligence Analytics Sidebar",
+    "category": "UI: Sidebars",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Data analytics platform navigation sidebar displaying query history, dashboard bookmarks, data sources, and cloud status.",
+    "tags": [
+      "Sidebars",
+      "Analytics",
+      "BI Platform",
+      "Data"
+    ],
+    "icon": "palette",
+    "size_bytes": 2418,
+    "featured": false
+  },
+  {
+    "id": "item-49",
+    "path": "CSS/css-components-main/navbars/navbar-6/index.html",
+    "title": "E-Commerce Navigation Header with Cart Counter",
+    "category": "UI: Navbars",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Retail store header bar with shopping bag item counter, currency selector, wishlist shortcut, and mega-menu links.",
+    "tags": [
+      "Navbars",
+      "E-Commerce",
+      "Cart Counter",
+      "Retail"
+    ],
+    "icon": "palette",
+    "size_bytes": 1326,
+    "featured": false
+  },
+  {
+    "id": "item-19",
+    "path": "CSS/css-components-main/footers/footer-11/index.html",
+    "title": "Email Newsletter & Community Growth Footer ('Join 2000+ users')",
+    "category": "UI: Footers",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Community-focused footer featuring an email newsletter subscription input, user count social proof, and privacy guarantee.",
+    "tags": [
+      "Footers",
+      "Newsletter",
+      "Email Subscribe",
+      "Social Proof"
+    ],
+    "icon": "palette",
+    "size_bytes": 3347,
+    "featured": false
+  },
+  {
+    "id": "item-38",
+    "path": "CSS/css-components-main/logins/login-7/index.html",
+    "title": "Encrypted Private File Sharing Auth Portal",
+    "category": "UI: Logins",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "High-privacy service authentication interface with client-side encryption indicator, passkey support, and session timer.",
+    "tags": [
+      "Logins",
+      "Encryption",
+      "Privacy",
+      "Security"
+    ],
+    "icon": "palette",
+    "size_bytes": 1938,
+    "featured": false
+  },
+  {
+    "id": "item-2",
+    "path": "CSS/css-components-main/accordions/accordion-1/index.html",
+    "title": "Expandable Team Members Profile Accordion",
+    "category": "UI: Accordions",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Smooth interactive accordion menu showcasing team member bios, social profile links, and animated panel transitions.",
+    "tags": [
+      "Accordion",
+      "Team",
+      "Transitions",
+      "Interactive"
+    ],
+    "icon": "palette",
+    "size_bytes": 1337,
+    "featured": false
+  },
+  {
+    "id": "item-42",
+    "path": "CSS/css-components-main/menus/menu-2/index.html",
+    "title": "Floating Pill Bottom Action Bar Navigation Menu",
+    "category": "UI: Menus",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Modern mobile-friendly floating navigation bar with active icon indicators, smooth hover transitions, and rounded pill shape.",
+    "tags": [
+      "Menu",
+      "Floating Bar",
+      "Mobile Nav",
+      "Pill"
+    ],
+    "icon": "palette",
+    "size_bytes": 1175,
+    "featured": false
+  },
+  {
+    "id": "item-41",
+    "path": "CSS/css-components-main/menus/menu-1/index.html",
+    "title": "Full-Screen Overlay Navigation Menu with Background Blur",
+    "category": "UI: Menus",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Full-page sliding navigation overlay with staggered link fade-ins, social media icons, and blurred background backdrop.",
+    "tags": [
+      "Menu",
+      "Overlay",
+      "Navigation",
+      "Glassmorphism"
+    ],
+    "icon": "palette",
+    "size_bytes": 1111,
+    "featured": false
+  },
+  {
+    "id": "item-48",
+    "path": "CSS/css-components-main/navbars/navbar-5/index.html",
+    "title": "Glassmorphic Bordered Navbar with Blur Backdrop",
+    "category": "UI: Navbars",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Frosted glass floating header featuring backdrop-filter blur, subtle outline border, and responsive mobile layout.",
+    "tags": [
+      "Navbars",
+      "Glassmorphism",
+      "Floating",
+      "Modern UI"
+    ],
+    "icon": "palette",
+    "size_bytes": 1495,
+    "featured": false
+  },
+  {
+    "id": "item-8",
+    "path": "CSS/css-components-main/cards/card-7/index.html",
+    "title": "Google Workspace Integration & Cloud Sync Card",
+    "category": "UI: Cards",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Third-party application integration card with service logo, connectivity status toggle, and permissions summary.",
+    "tags": [
+      "Cards",
+      "Integration",
+      "Cloud",
+      "SaaS"
+    ],
+    "icon": "palette",
+    "size_bytes": 1487,
+    "featured": false
+  },
+  {
+    "id": "item-33",
+    "path": "CSS/css-components-main/logins/login-2/index.html",
+    "title": "Gradient Glassmorphic Social Login Form",
+    "category": "UI: Logins",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Modern authentication card over a vibrant color gradient background with Google, GitHub, and email credentials.",
+    "tags": [
+      "Logins",
+      "Glassmorphism",
+      "Social Auth",
+      "Gradients"
+    ],
+    "icon": "palette",
+    "size_bytes": 891,
+    "featured": false
+  },
+  {
+    "id": "item-58",
+    "path": "CSS/css-components-main/sidebars/sidebar-7/index.html",
+    "title": "Hierarchical Tree-View Enterprise Sidebar",
+    "category": "UI: Sidebars",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "File tree and organizational hierarchy sidebar with expandable directory arrows, document icons, and status badges.",
+    "tags": [
+      "Sidebars",
+      "Tree View",
+      "Directory",
+      "Enterprise"
+    ],
+    "icon": "palette",
+    "size_bytes": 3430,
+    "featured": false
+  },
+  {
+    "id": "item-18",
+    "path": "CSS/css-components-main/footers/footer-10/index.html",
+    "title": "High-Impact Conversion Banner Footer ('Are you ready?')",
+    "category": "UI: Footers",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "High-impact footer featuring a bold call-to-action question, instant sign-up input, and customer testimonial quotes.",
+    "tags": [
+      "Footers",
+      "Conversion",
+      "CTA Banner",
+      "Growth"
+    ],
+    "icon": "palette",
+    "size_bytes": 4548,
+    "featured": false
+  },
+  {
+    "id": "item-39",
+    "path": "CSS/css-components-main/logins/login-8/index.html",
+    "title": "Holla Creative App Sign-In with Social Auth",
+    "category": "UI: Logins",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Vibrant modern consumer app sign-in card with playful branding, social buttons, and quick password reset link.",
+    "tags": [
+      "Logins",
+      "Creative",
+      "Social Login",
+      "Modern UI"
+    ],
+    "icon": "palette",
+    "size_bytes": 1787,
+    "featured": false
+  },
+  {
+    "id": "item-6",
+    "path": "CSS/css-components-main/cards/card-3/index.html",
+    "title": "Interactive Product Feature Showcase Card",
+    "category": "UI: Cards",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Card component with image badge, feature highlights, subtle border glow, and interactive action buttons.",
+    "tags": [
+      "Cards",
+      "Product",
+      "Feature",
+      "Modern UI"
+    ],
+    "icon": "palette",
+    "size_bytes": 1820,
+    "featured": false
+  },
+  {
+    "id": "item-13",
+    "path": "CSS/css-components-main/dropdowns/dropdown-1/index.html",
+    "title": "Joemail User Account & Inbox Navigation Dropdown",
+    "category": "UI: Dropdowns",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Profile menu dropdown with user status avatar, storage quota indicator, unread message badges, and logout link.",
+    "tags": [
+      "Dropdown",
+      "User Menu",
+      "Navigation",
+      "Badges"
+    ],
+    "icon": "palette",
+    "size_bytes": 3506,
+    "featured": false
+  },
+  {
+    "id": "item-37",
+    "path": "CSS/css-components-main/logins/login-6/index.html",
+    "title": "Jolt Onboarding & Member Sign-In Screen",
+    "category": "UI: Logins",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Productivity suite login screen with animated welcome greeting, single sign-on buttons, and account recovery help.",
+    "tags": [
+      "Logins",
+      "Onboarding",
+      "SSO",
+      "Clean UI"
+    ],
+    "icon": "palette",
+    "size_bytes": 3698,
+    "featured": false
+  },
+  {
+    "id": "item-45",
+    "path": "CSS/css-components-main/navbars/navbar-2/index.html",
+    "title": "Minimalist Dark Mode Navigation Bar with Sub-Links",
+    "category": "UI: Navbars",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Dark theme header bar featuring sleek typography, dropdown indicators, search trigger, and notifications icon.",
+    "tags": [
+      "Navbars",
+      "Dark Mode",
+      "Navigation",
+      "Minimalist"
+    ],
+    "icon": "palette",
+    "size_bytes": 1905,
+    "featured": false
+  },
+  {
+    "id": "item-22",
+    "path": "CSS/css-components-main/footers/footer-4/index.html",
+    "title": "Mobile App Store Badges Download Footer",
+    "category": "UI: Footers",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "App showcase footer featuring official App Store and Google Play badges, QR code download trigger, and platform ratings.",
+    "tags": [
+      "Footers",
+      "App Store Badges",
+      "Download",
+      "Mobile App"
+    ],
+    "icon": "palette",
+    "size_bytes": 2552,
+    "featured": false
+  },
+  {
+    "id": "item-21",
+    "path": "CSS/css-components-main/footers/footer-3/index.html",
+    "title": "Multi-Column Services & Solutions Footer",
+    "category": "UI: Footers",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Structured 4-column footer mapping product solutions, developer documentation, company links, and social feeds.",
+    "tags": [
+      "Footers",
+      "Multi-Column",
+      "Sitemap",
+      "Corporate"
+    ],
+    "icon": "palette",
+    "size_bytes": 2713,
+    "featured": false
+  },
+  {
+    "id": "item-51",
+    "path": "CSS/css-components-main/parallax/parallax-1/index.html",
+    "title": "Multi-Layer CSS Parallax Scrolling Experience",
+    "category": "UI: Parallax",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Depth-simulating parallax scrolling demonstration using 3D transforms, layer stacking, and smooth perspective shifts.",
+    "tags": [
+      "Parallax",
+      "3D Transforms",
+      "Scrolling",
+      "Visual FX"
+    ],
+    "icon": "palette",
+    "size_bytes": 2008,
+    "featured": false
+  },
+  {
+    "id": "item-11",
+    "path": "CSS/css-components-main/carousels/carousel-2/index.html",
+    "title": "Multi-Slide Image Gallery Carousel Slider",
+    "category": "UI: Carousels",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Responsive image carousel slider featuring smooth sliding transitions, pagination dots, and picture card hover effects.",
+    "tags": [
+      "Carousel",
+      "Image Slider",
+      "Gallery",
+      "Animation"
+    ],
+    "icon": "palette",
+    "size_bytes": 1248,
+    "featured": false
+  },
+  {
+    "id": "item-16",
+    "path": "CSS/css-components-main/dropdowns/dropdown-3/index.html",
+    "title": "Multi-Tier Action Context Menu Dropdown",
+    "category": "UI: Dropdowns",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Contextual action dropdown featuring categorized command icons, keyboard shortcuts, and hover highlights.",
+    "tags": [
+      "Dropdown",
+      "Context Menu",
+      "Actions",
+      "Icons"
+    ],
+    "icon": "palette",
+    "size_bytes": 2763,
+    "featured": false
+  },
+  {
+    "id": "item-35",
+    "path": "CSS/css-components-main/logins/login-4/index.html",
+    "title": "Neumorphic Soft Shadow Sign-In Card",
+    "category": "UI: Logins",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Tactile neumorphism design with extruded inner and outer soft shadows on form inputs and submission buttons.",
+    "tags": [
+      "Logins",
+      "Neumorphism",
+      "Soft Shadows",
+      "Tactile"
+    ],
+    "icon": "palette",
+    "size_bytes": 1385,
+    "featured": false
+  },
+  {
+    "id": "item-62",
+    "path": "CSS/css-components-main/signups/signup-4/index.html",
+    "title": "One-Click Social Sign-Up (Google & Apple)",
     "category": "UI: Signups",
     "main_group": "UI Components",
     "folder": "CSS",
-    "description": "Clean, responsive ui: signups implementation built with semantic HTML & modern CSS.",
+    "description": "Frictionless registration card highlighting prominent one-click Google and Apple OAuth authentication buttons.",
     "tags": [
-      "Forms",
-      "Responsive"
+      "Signups",
+      "Social Auth",
+      "Google / Apple",
+      "Conversion"
+    ],
+    "icon": "palette",
+    "size_bytes": 1742,
+    "featured": false
+  },
+  {
+    "id": "item-14",
+    "path": "CSS/css-components-main/dropdowns/dropdown-2/index.html",
+    "title": "Pexels Photo Media Filter & Orientation Dropdown",
+    "category": "UI: Dropdowns",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Media filtering dropdown menu allowing users to select image orientation, color palettes, and photography sorting options.",
+    "tags": [
+      "Dropdown",
+      "Filters",
+      "Media",
+      "Clean UI"
+    ],
+    "icon": "palette",
+    "size_bytes": 1412,
+    "featured": false
+  },
+  {
+    "id": "item-60",
+    "path": "CSS/css-components-main/signups/signup-2/index.html",
+    "title": "Profile Avatar Upload Registration Screen",
+    "category": "UI: Signups",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "User sign-up form with interactive profile photo uploader, circular avatar preview, and personal details inputs.",
+    "tags": [
+      "Signups",
+      "Avatar Upload",
+      "Profile",
+      "Interactive"
+    ],
+    "icon": "palette",
+    "size_bytes": 1078,
+    "featured": false
+  },
+  {
+    "id": "item-65",
+    "path": "CSS/img13.html",
+    "title": "Responsive Image Gallery & Photo Grid Showcase",
+    "category": "CSS Styling",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Image gallery layout utilizing CSS grid and flexbox to arrange photos with hover scaling effects and captions.",
+    "tags": [
+      "Image Gallery",
+      "Photo Grid",
+      "Responsive",
+      "CSS Grid"
+    ],
+    "icon": "palette",
+    "size_bytes": 471,
+    "featured": false
+  },
+  {
+    "id": "item-36",
+    "path": "CSS/css-components-main/logins/login-5/index.html",
+    "title": "Saferly Two-Factor Security Verification Screen",
+    "category": "UI: Logins",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Enterprise security verification card with multi-factor code inputs, device trust confirmation, and biometric prompt.",
+    "tags": [
+      "Logins",
+      "2FA Security",
+      "Verification",
+      "Enterprise"
+    ],
+    "icon": "palette",
+    "size_bytes": 1371,
+    "featured": false
+  },
+  {
+    "id": "item-46",
+    "path": "CSS/css-components-main/navbars/navbar-3/index.html",
+    "title": "Search-Centric Webmail App Header Navigation Bar",
+    "category": "UI: Navbars",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Productivity app header featuring integrated search box, filter chips, settings icon, and user account status.",
+    "tags": [
+      "Navbars",
+      "Search Bar",
+      "Web App",
+      "Header"
+    ],
+    "icon": "palette",
+    "size_bytes": 1618,
+    "featured": false
+  },
+  {
+    "id": "item-64",
+    "path": "CSS/css-components-main/widgets/widget-1/index.html",
+    "title": "Security & Privacy Permissions Toggle Widget",
+    "category": "UI: Widgets",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Settings control widget featuring smooth switch toggles, permission descriptions, and device security indicators.",
+    "tags": [
+      "Widget",
+      "Toggle Switch",
+      "Settings",
+      "Security"
+    ],
+    "icon": "palette",
+    "size_bytes": 3034,
+    "featured": false
+  },
+  {
+    "id": "item-7",
+    "path": "CSS/css-components-main/cards/card-4/index.html",
+    "title": "Social Media Influencer Profile & Stats Card (Jill Scott)",
+    "category": "UI: Cards",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Social follower statistics card with banner cover photo, follower metrics, engagement numbers, and message button.",
+    "tags": [
+      "Cards",
+      "Social Media",
+      "Stats",
+      "Profile"
+    ],
+    "icon": "palette",
+    "size_bytes": 1499,
+    "featured": false
+  },
+  {
+    "id": "item-40",
+    "path": "CSS/css-components-main/logins/login-9/index.html",
+    "title": "Split-Screen Photography Hero Login Card",
+    "category": "UI: Logins",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Two-column login layout pairing high-resolution photography on one side with a focused credential form on the other.",
+    "tags": [
+      "Logins",
+      "Split Screen",
+      "Photography",
+      "Hero Layout"
+    ],
+    "icon": "palette",
+    "size_bytes": 1368,
+    "featured": false
+  },
+  {
+    "id": "item-61",
+    "path": "CSS/css-components-main/signups/signup-3/index.html",
+    "title": "Step-by-Step Corporate Account Onboarding Wizard",
+    "category": "UI: Signups",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Multi-step registration wizard guiding new enterprise accounts through organization details, team size, and admin credentials.",
+    "tags": [
+      "Signups",
+      "Wizard",
+      "Multi-Step",
+      "Enterprise"
     ],
     "icon": "palette",
     "size_bytes": 1403,
@@ -2168,32 +2388,145 @@
   {
     "id": "item-63",
     "path": "CSS/css-components-main/tricks/sticky-sidebar/index.html",
-    "title": "Sticky Sidebar",
+    "title": "Sticky Filter Sidebar with Scroll-Spy Layout",
     "category": "UI: Tricks",
     "main_group": "UI Components",
     "folder": "CSS",
-    "description": "Clean, responsive ui: tricks implementation built with semantic HTML & modern CSS.",
+    "description": "UX pattern demonstrating CSS position: sticky for a product filter sidebar that stays in view while page content scrolls.",
     "tags": [
-      "JavaScript",
-      "Responsive"
+      "Sticky Sidebar",
+      "UX Trick",
+      "CSS Layout",
+      "Filters"
     ],
     "icon": "palette",
     "size_bytes": 2295,
     "featured": false
   },
   {
-    "id": "item-64",
-    "path": "CSS/css-components-main/widgets/widget-1/index.html",
-    "title": "Widget 2 (HTML + CSS)",
-    "category": "UI: Widgets",
+    "id": "item-50",
+    "path": "CSS/css-components-main/navbars/navbar-7/index.html",
+    "title": "Tabbed Indicator Navigation Bar with Sliding Underline",
+    "category": "UI: Navbars",
     "main_group": "UI Components",
     "folder": "CSS",
-    "description": "Clean, responsive ui: widgets implementation built with semantic HTML & modern CSS.",
+    "description": "Interactive navigation header with animated underline indicator that tracks the active link on hover.",
     "tags": [
-      "Responsive"
+      "Navbars",
+      "Tabbed Nav",
+      "Animation",
+      "Interactive"
     ],
     "icon": "palette",
-    "size_bytes": 3034,
+    "size_bytes": 1905,
+    "featured": false
+  },
+  {
+    "id": "item-5",
+    "path": "CSS/css-components-main/cards/card-2/index.html",
+    "title": "Tiered SaaS Pricing Comparison Card (Free vs Pro)",
+    "category": "UI: Cards",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Clean subscription pricing card detailing monthly costs, included features, quota limits, and conversion call-to-action.",
+    "tags": [
+      "Cards",
+      "Pricing Tier",
+      "SaaS",
+      "Conversion"
+    ],
+    "icon": "palette",
+    "size_bytes": 2580,
+    "featured": false
+  },
+  {
+    "id": "item-9",
+    "path": "CSS/css-components-main/cards/card-8/index.html",
+    "title": "Travel Destination & Flight Booking Card (Malaysia)",
+    "category": "UI: Cards",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Travel inspiration card featuring destination photography, price per night badge, star rating, and booking button.",
+    "tags": [
+      "Cards",
+      "Travel",
+      "Booking",
+      "E-Commerce"
+    ],
+    "icon": "palette",
+    "size_bytes": 1632,
+    "featured": false
+  },
+  {
+    "id": "item-55",
+    "path": "CSS/css-components-main/sidebars/sidebar-4/index.html",
+    "title": "Untitled UI SaaS Admin Navigation Drawer",
+    "category": "UI: Sidebars",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Comprehensive admin dashboard navigation drawer featuring nested sub-menus, search bar, notification badges, and user profile.",
+    "tags": [
+      "Sidebars",
+      "SaaS Admin",
+      "Drawer",
+      "Navigation"
+    ],
+    "icon": "palette",
+    "size_bytes": 3413,
+    "featured": false
+  },
+  {
+    "id": "item-57",
+    "path": "CSS/css-components-main/sidebars/sidebar-6/index.html",
+    "title": "User Profile & Account Settings Navigation Sidebar",
+    "category": "UI: Sidebars",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Account preferences sidebar organizing billing, security keys, notification settings, and team access permissions.",
+    "tags": [
+      "Sidebars",
+      "Account Settings",
+      "Preferences",
+      "User"
+    ],
+    "icon": "palette",
+    "size_bytes": 2171,
+    "featured": false
+  },
+  {
+    "id": "item-52",
+    "path": "CSS/css-components-main/sidebars/sidebar-1/index.html",
+    "title": "Violet AI Assistant & Prompt History Sidebar",
+    "category": "UI: Sidebars",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "AI chat interface sidebar organizing saved prompt history, model selector, new chat button, and user credits counter.",
+    "tags": [
+      "Sidebars",
+      "AI Chat",
+      "History",
+      "Dark Mode"
+    ],
+    "icon": "palette",
+    "size_bytes": 1361,
+    "featured": false
+  },
+  {
+    "id": "item-54",
+    "path": "CSS/css-components-main/sidebars/sidebar-3/index.html",
+    "title": "teams.co Multi-Workspace Collaboration Sidebar",
+    "category": "UI: Sidebars",
+    "main_group": "UI Components",
+    "folder": "CSS",
+    "description": "Enterprise team collaboration sidebar with workspace switcher, channels list, direct message indicators, and voice status.",
+    "tags": [
+      "Sidebars",
+      "Team Chat",
+      "Workspaces",
+      "Channels"
+    ],
+    "icon": "palette",
+    "size_bytes": 2415,
     "featured": false
   }
 ];
