@@ -1,0 +1,29 @@
+body{
+    background-color: springgreen;
+    font-size:1rem ;
+    color: black;
+    font-family: sans-serif;
+    
+}
+
+p{
+    background-color: red;
+}
+div.phase-1{
+    background-color: #D8E2DC;
+}
+div.phase-2{
+    background-color:yellow;
+}
+div.phase-3{
+    background-color: rgb(210,30,123);
+}
+div.phase-4{
+    background-color: rgb(20,20,60)
+}
+div.phase-5{
+    background-color: rgb(255,255,255)
+}
+div.phase-6{
+    background-color: rgb(177,101,255)
+}

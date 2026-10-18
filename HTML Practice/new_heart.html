@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Handy AI – Gesture Experience</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --bg: #03020a;
+      --surface: rgba(255,255,255,0.04);
+      --border: rgba(255,255,255,0.08);
+      --accent: #7cffc4;
+      --accent2: #ff6bca;
+      --accent3: #6bb5ff;
+      --text: #f0eeff;
+      --muted: rgba(240,238,255,0.45);
+      --font-head: 'Syne', sans-serif;
+      --font-mono: 'DM Mono', monospace;
+    }
+
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+    body {
+      font-family: var(--font-mono);
+      background: var(--bg);
+      color: var(--text);
+      overflow: hidden;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    /* ── SPLASH SCREEN ─────────────────────────────────── */
+    #splash {
+      position: fixed;
+      inset: 0;
+      z-index: 200;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(ellipse 80% 80% at 50% 60%, rgba(124,255,196,0.08) 0%, #03020a 70%);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    #splash.out { opacity:0; pointer-events:none; transform: scale(1.04); }
+
+    .splash-logo {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: clamp(3rem, 8vw, 7rem);
+      letter-spacing: -2px;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--accent) 0%, var(--accent3) 50%, var(--accent2) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 8px;
+    }
+    .splash-sub {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      letter-spacing: 0.35em;
+      color: var(--muted);
+      text-transform: uppercase;
+      margin-bottom: 60px;
+    }
+
+    .splash-features {
+      display: flex;
+      gap: 24px;
+      margin-bottom: 56px;
+    }
+    .feature-pill {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 8px 18px;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .enter-btn {
+      position: relative;
+      padding: 18px 52px;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #03020a;
+      background: var(--accent);
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 0 40px rgba(124,255,196,0.35);
+    }
+    .enter-btn::after {
+      content:'';
+      position:absolute;
+      inset:0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.25), transparent);
+      border-radius: inherit;
+    }
+    .enter-btn:hover { transform: scale(1.04); box-shadow: 0 0 70px rgba(124,255,196,0.55); }
+    .enter-btn:active { transform: scale(0.98); }
+
+    .splash-note {
+      margin-top: 28px;
+      font-size: 0.68rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      opacity: 0.6;
+    }
+
+    /* Animated ring */
+    .splash-ring {
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      border: 1px solid rgba(124,255,196,0.1);
+      animation: ringPulse 4s ease-in-out infinite;
+      pointer-events: none;
+    }
+    .splash-ring:nth-child(2) { width:600px; height:600px; animation-delay:-1.5s; border-color: rgba(107,181,255,0.07); }
+    .splash-ring:nth-child(3) { width:780px; height:780px; animation-delay:-3s; border-color: rgba(255,107,202,0.05); }
+    @keyframes ringPulse {
+      0%,100% { transform: scale(1); opacity:1; }
+      50% { transform: scale(1.06); opacity:0.5; }
+    }
+
+    /* ── CAMERA & CANVASES ──────────────────────────────── */
+    #videoWrap {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+    }
+    video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scaleX(-1);
+      filter: brightness(0.88) saturate(1.1) contrast(1.05);
+    }
+    #bgCanvas, #fxCanvas, #drawCanvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      transform: scaleX(-1);
+    }
+    #bgCanvas  { z-index: 1; }
+    #fxCanvas  { z-index: 2; }
+    #drawCanvas { z-index: 3; }
+
+    /* ── TOP BAR ────────────────────────────────────────── */
+    #topbar {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 28px;
+      background: linear-gradient(to bottom, rgba(3,2,10,0.85) 0%, transparent 100%);
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(-8px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+    #topbar.visible { opacity: 1; transform: translateY(0); pointer-events: all; }
+
+    .brand {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+    .brand-name {
+      font-family: var(--font-head);
+      font-weight: 800;
+      font-size: 1.3rem;
+      letter-spacing: -0.5px;
+      background: linear-gradient(90deg, var(--accent), var(--accent3));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .brand-badge {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      color: var(--muted);
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+    }
+
+    /* Mode switcher */
+    #modeSwitcher {
+      display: flex;
+      gap: 4px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      padding: 4px;
+      backdrop-filter: blur(12px);
+    }
+    .mode-btn {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      padding: 9px 18px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      color: var(--muted);
+      background: transparent;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .mode-btn svg { width:14px; height:14px; opacity:0.6; transition: opacity 0.25s; }
+    .mode-btn.active {
+      background: rgba(255,255,255,0.1);
+      color: var(--text);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
+    }
+    .mode-btn.active svg { opacity: 1; }
+    .mode-btn.active[data-mode="play"]      { color: var(--accent); }
+    .mode-btn.active[data-mode="drawshape"] { color: var(--accent2); }
+    .mode-btn.active[data-mode="write"]     { color: var(--accent3); }
+    .mode-btn:hover:not(.active) { color: var(--text); background: rgba(255,255,255,0.05); }
+
+    /* ── BOTTOM HUD ─────────────────────────────────────── */
+    #hud {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(16px);
+      z-index: 100;
+      display: flex;
+      gap: 12px;
+      opacity: 0;
+      transition: opacity 0.5s ease, transform 0.5s ease;
+      pointer-events: none;
+    }
+    #hud.visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+    .hud-chip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: rgba(3,2,10,0.7);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      backdrop-filter: blur(16px);
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      color: var(--muted);
+    }
+    .hud-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--muted);
+      transition: background 0.3s;
+    }
+    .hud-dot.on { background: var(--accent); box-shadow: 0 0 8px var(--accent); }
+    .hud-val { color: var(--text); font-weight: 500; }
+
+    /* ── GESTURE TOAST ──────────────────────────────────── */
+    #toast {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.85);
+      z-index: 150;
+      font-family: var(--font-head);
+      font-weight: 700;
+      font-size: clamp(1.8rem, 5vw, 3.5rem);
+      letter-spacing: -1px;
+      color: var(--text);
+      text-align: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.3s cubic-bezier(0.34,1.56,0.64,1);
+      text-shadow: 0 0 40px currentColor;
+    }
+    #toast.show { opacity: 1; transform: translate(-50%,-50%) scale(1); }
+
+    /* ── HELP PANEL ─────────────────────────────────────── */
+    #help {
+      position: fixed;
+      bottom: 86px;
+      right: 24px;
+      z-index: 100;
+      background: rgba(3,2,10,0.82);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 18px 22px;
+      backdrop-filter: blur(20px);
+      font-size: 0.7rem;
+      line-height: 2;
+      color: var(--muted);
+      min-width: 220px;
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      pointer-events: none;
+    }
+    #help.visible { opacity: 1; transform: translateY(0); }
+    #help h4 { color: var(--text); font-family: var(--font-head); font-size: 0.78rem; margin-bottom: 10px; letter-spacing: 0.05em; }
+    #help .tip { display: flex; gap: 10px; }
+    #help .tip-icon { color: var(--accent); min-width: 18px; }
+
+    /* ── CLEAR BTN (Write mode) ──────────────────────────── */
+    /* Shake progress ring */
+    #shakeRing {
+      position: fixed;
+      bottom: 80px;
+      right: 32px;
+      z-index: 100;
+      width: 60px;
+      height: 60px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+    #shakeRing.visible { opacity: 1; }
+    #shakeRing svg { width: 60px; height: 60px; transform: rotate(-90deg); }
+    #shakeRing .ring-bg { fill: none; stroke: rgba(255,255,255,0.08); stroke-width: 4; }
+    #shakeRing .ring-fill { fill: none; stroke: var(--accent3); stroke-width: 4;
+      stroke-linecap: round; stroke-dasharray: 157; stroke-dashoffset: 157;
+      transition: stroke-dashoffset 0.15s ease, stroke 0.3s; filter: drop-shadow(0 0 6px var(--accent3)); }
+    #shakeRing .ring-icon { font-size: 22px; dominant-baseline: middle; text-anchor: middle; }
+
+    #clearBtn {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 100;
+      padding: 11px 22px;
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      background: rgba(3,2,10,0.7);
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      cursor: pointer;
+      backdrop-filter: blur(12px);
+      transition: all 0.25s;
+      opacity: 0;
+      pointer-events: none;
+    }
+    #clearBtn.visible { opacity: 1; pointer-events: all; }
+    #clearBtn:hover { color: var(--accent2); border-color: var(--accent2); }
+
+    /* ── NOISE OVERLAY ──────────────────────────────────── */
+    #noise {
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      pointer-events: none;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 180px;
+    }
+
+    /* ── MODE INDICATOR STRIPE ──────────────────────────── */
+    #modeStripe {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      z-index: 101;
+      background: var(--accent);
+      transform-origin: left;
+      transform: scaleX(0);
+      transition: transform 0.4s cubic-bezier(0.25,1,0.5,1), background 0.4s;
+      opacity: 0;
+    }
+    #modeStripe.visible { opacity: 1; transform: scaleX(1); }
+
+    @media (max-width: 600px) {
+      .splash-features { flex-direction: column; gap: 8px; align-items: center; }
+      .mode-btn span { display: none; }
+      .mode-btn { padding: 9px 13px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NOISE GRAIN -->
+<div id="noise"></div>
+
+<!-- SPLASH -->
+<div id="splash">
+  <div class="splash-ring"></div>
+  <div class="splash-ring"></div>
+  <div class="splash-ring"></div>
+  <div class="splash-logo">Handy AI</div>
+  <div class="splash-sub">Gesture Intelligence Platform</div>
+  <div class="splash-features">
+    <div class="feature-pill">✦ Real-time Tracking</div>
+    <div class="feature-pill">✦ Gesture Physics</div>
+    <div class="feature-pill">✦ Air Drawing</div>
+  </div>
+  <button class="enter-btn" id="enterBtn">Enter Experience</button>
+  <p class="splash-note">Camera access required &nbsp;·&nbsp; Best in Chrome / Edge</p>
+</div>
+
+<!-- VIDEO + CANVASES -->
+<div id="videoWrap">
+  <video id="vid" autoplay playsinline muted></video>
+  <canvas id="bgCanvas"></canvas>
+  <canvas id="fxCanvas"></canvas>
+  <canvas id="drawCanvas"></canvas>
+</div>
+
+<!-- TOP BAR -->
+<div id="topbar">
+  <div class="brand">
+    <span class="brand-name">Handy AI</span>
+    <span class="brand-badge">Beta</span>
+  </div>
+  <div id="modeSwitcher">
+    <button class="mode-btn active" data-mode="play">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z"/></svg>
+      <span>Play</span>
+    </button>
+    <button class="mode-btn" data-mode="drawshape">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z"/></svg>
+      <span>Shapes</span>
+    </button>
+    <button class="mode-btn" data-mode="write">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+      <span>Write</span>
+    </button>
+  </div>
+  <div style="display:flex; gap:8px; align-items:center;">
+    <div class="hud-chip" style="padding:8px 14px;">
+      <div class="hud-dot" id="camDot"></div>
+      <span class="hud-val" id="fpsVal">--</span>
+      <span>fps</span>
+    </div>
+    <div class="hud-chip" style="padding:8px 14px;">
+      <span>✋</span>
+      <span class="hud-val" id="handsVal">0</span>
+    </div>
+  </div>
+</div>
+
+<!-- BOTTOM HUD -->
+<div id="hud">
+  <div class="hud-chip">
+    <div class="hud-dot" id="gestDot"></div>
+    <span id="gestLabel">Awaiting gesture</span>
+  </div>
+</div>
+
+<!-- HELP PANEL -->
+<div id="help">
+  <h4 id="helpTitle">Play Mode</h4>
+  <div class="tip"><span class="tip-icon">✦</span><span id="helpLine1">Pinch fingers to fire shockwave</span></div>
+  <div class="tip"><span class="tip-icon">✦</span><span id="helpLine2">Both hands = lightning arcs</span></div>
+  <div class="tip"><span class="tip-icon">✦</span><span id="helpLine3">Move fast to speed up rain</span></div>
+</div>
+
+<!-- MODE STRIPE -->
+<div id="modeStripe"></div>
+
+<!-- CLEAR BUTTON -->
+<div id="shakeRing">
+  <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+    <circle class="ring-bg"   cx="30" cy="30" r="25"/>
+    <circle class="ring-fill" cx="30" cy="30" r="25" id="ringFill"/>
+    <text class="ring-icon" x="30" y="34" transform="rotate(90,30,30)">✋</text>
+  </svg>
+</div>
+<button id="clearBtn">Clear Canvas</button>
+
+<!-- GESTURE TOAST -->
+<div id="toast"></div>
+
+<script>
+// ══════════════════════════════════════════════════════════
+//  HANDY AI – Core Engine
+// ══════════════════════════════════════════════════════════
+
+const vid        = document.getElementById('vid');
+const bgCanvas   = document.getElementById('bgCanvas');
+const fxCanvas   = document.getElementById('fxCanvas');
+const drawCanvas = document.getElementById('drawCanvas');
+const bgCtx      = bgCanvas.getContext('2d');
+const fxCtx      = fxCanvas.getContext('2d');
+const drCtx      = drawCanvas.getContext('2d');
+
+// UI refs
+const topbar    = document.getElementById('topbar');
+const hudEl     = document.getElementById('hud');
+const helpEl    = document.getElementById('help');
+const toast     = document.getElementById('toast');
+const clearBtn  = document.getElementById('clearBtn');
+const modeStripe = document.getElementById('modeStripe');
+const gestDot   = document.getElementById('gestDot');
+const gestLabel = document.getElementById('gestLabel');
+const camDot    = document.getElementById('camDot');
+const fpsVal    = document.getElementById('fpsVal');
+const handsVal  = document.getElementById('handsVal');
+
+// ── State ─────────────────────────────────────────────────
+let W = 0, H = 0;
+let mode = 'play';
+let hands = [];        // current landmarks
+let prevHands = [];
+let handVel  = 0;
+let time = 0;
+let lastT = performance.now();
+let fps = 0, fpsCounter = 0, fpsLast = performance.now();
+
+// Particles & ripples
+let particles = [];
+let ripples = [];
+
+// Drawing
+let drawPaths = [];        // [ [{x,y,p}, ...], ... ]
+let activePath = null;
+let isDrawing  = false;
+let drawColor  = 0;        // hue cycle
+
+// Pinch state
+let pinchWas = [false, false];
+
+// Audio
+let audioCtx = null;
+let humOsc = null, humGain = null;
+
+// Matrix rain
+const FONT_SIZE = 15;
+let matCols = [], maxCols = 0;
+
+// Toast timer
+let toastTimer = null;
+
+// Glow palette – per mode
+const MODES = {
+  play:      { accent:'#7cffc4', accent2:'#ff6bca', stripe:'linear-gradient(90deg,#7cffc4,#6bb5ff)' },
+  drawshape: { accent:'#ff6bca', accent2:'#ffb86c', stripe:'linear-gradient(90deg,#ff6bca,#ffb86c)' },
+  write:     { accent:'#6bb5ff', accent2:'#b8aaff', stripe:'linear-gradient(90deg,#6bb5ff,#b8aaff)' },
+};
+
+const FINGER_TIPS = [4, 8, 12, 16, 20];
+
+// Help text per mode
+const HELP = {
+  play: {
+    title: 'Play Mode',
+    tips: ['Pinch thumb + index to fire shockwave', 'Use both hands for lightning arcs', 'Sway fast to energize the rain'],
+  },
+  drawshape: {
+    title: 'Shape Mode',
+    tips: ['Hold both hands close, fingers open = ♥️ Heart', 'Peace sign (2 fingers) = ✌ displayed', 'Fist both hands = ⭐ Star burst'],
+  },
+  write: {
+    title: 'Write Mode',
+    tips: ['Point with index finger to draw', 'Close fist to lift the pen', 'Shake open hand rapidly to clear'],
+  },
+};
+
+// ── Resize ────────────────────────────────────────────────
+function resize() {
+  W = window.innerWidth;
+  H = window.innerHeight;
+  [bgCanvas, fxCanvas, drawCanvas].forEach(c => { c.width = W; c.height = H; });
+  maxCols = Math.floor(W / FONT_SIZE);
+  matCols = Array.from({length: maxCols}, () => Math.random() * (H / FONT_SIZE));
+}
+window.addEventListener('resize', resize);
+resize();
+
+// ── Map landmark to canvas ────────────────────────────────
+function lm(pt) {
+  // MediaPipe x is already mirrored-aware; canvas is CSS-flipped so coords match
+  return { x: pt.x * W, y: pt.y * H };
+}
+function dist(a, b) {
+  return Math.hypot(a.x - b.x, a.y - b.y);
+}
+function ndist(a, b) {
+  return Math.hypot(a.x - b.x, a.y - b.y);  // normalised-space distance
+}
+
+// ── Toast ─────────────────────────────────────────────────
+function showToast(text, color) {
+  toast.textContent = text;
+  toast.style.color = color || MODES[mode].accent;
+  toast.classList.add('show');
+  if (toastTimer) clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { toast.classList.remove('show'); }, 1200);
+}

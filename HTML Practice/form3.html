@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: rgb(247, 242, 242);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        background-color: rgb(10, 221, 253);
+        padding: 20px;
+        border-radius: 50px;
+        box-shadow: 0 0 10px rgba(8, 227, 121, 0.1);
+        width: 300px;
+      }
+      h2 {
+        text-align:center;
+      }
+      .form-group {
+        margin-bottom:15px;
+      }
+      label {
+        display: block;
+        margin-bottom: 4px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding:10px;
+        border: 1px solid #07e4f4;
+        border-radius: 200px;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #060419;
+        color: rgb(249, 248, 248);
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #240eef;
+      }
+    </style>
+  </head>
+  <body>
+    <div class=>
+      <h2>Google Registration Form</h2>
+      <form action="/submit_registration" method="POST">
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" name="first-name" required />
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" name="last-name" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required />
+        </div>
+        <div class="form-group">
+          <label for="number">Number</label>
+          <input type="Number" id="Number" name="Number" required />
+        </div>
+        Highest qualification
+        <br />
+        <input type="radio" value="12th" name="class" id="101" />12th
+        <input type="radio" value="B.tech" name="class" />B.tech
+
+        <br /><br />Select Subject
+        <label for="101">
+          <input type="checkbox" value="Math" name="subject" id="101" />Math
+        </label>
+        <label for="102">
+          <input
+            type="checkbox"
+            value="Chemistry"
+            name="subject"
+            id="102"
+          />Chemistry
+        </label>
+        <label for="103">
+          <input
+            type="checkbox"
+            value="Physics"
+            name="subject"
+            id="103"
+          />Physics
+        </label>
+        <label for="104">
+          <input
+            type="checkbox"
+            value="UHV"
+            name="subject"
+            id="104"
+          />UHV </label
+        ><br />
+
+        SELECT YOUR CITY:
+        <select name="city" id="">
+          <option value="Bhubaneswar">bhubaneswar</option>
+          <option value="Delhi">Delhi</option>
+          <option value="Mumbai">Mumbai</option>
+          <option value="Banglore">Banglore</option></select
+        ><br /><br />
+        <textarea
+          name="feedback"
+          id="101"
+          placeholder="Give your feedback"
+        ></textarea>
+
+        <button type="submit">Sumbit</button>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Lab Record Sheet</title>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f5f5f5;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .page {
+        width: 700px;
+        height: 930px;
+        background: white;
+        padding: 20px 30px;
+        position: relative;
+        box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+
+    /* HEADER */
+    .title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .sub-header {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    .line {
+        border-bottom: 1px solid black;
+        width: 150px;
+        display: inline-block;
+    }
+
+    /* MAIN BOX */
+    .content-box {
+        margin-top: 10px;
+        height: 780px;
+        border: 2px solid black;
+    }
+
+    /* SIGNATURE AREA */
+    .footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        font-size: 13px;
+    }
+
+    .sign-line {
+        margin-top: 30px;
+        border-top: 1px solid black;
+        width: 200px;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+    <!-- HEADER -->
+    <div class="title">
+        NALANDA INSTITUTE OF TECHNOLOGY, BHUBANESWAR
+    </div>
+
+    <div class="sub-header">
+        <div>Experiment no. <span class="line"></span></div>
+        <div>Date <span class="line"></span></div>
+    </div>
+
+    <!-- MAIN WRITING AREA -->
+    <div class="content-box"></div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div>
+            Signature of faculty
+        </div>
+
+        <div>
+            Signature of student<br>
+            Regd. No. -
+            <div class="sign-line"></div>
+        </div>
+        
+    </div>
+<div style="text-align: center;font-size: 14px">
+    Created by @Pabitra Lenka
+</div>
+    
+</div>
+
+<script>
+    // Optional: Auto-fill today's date
+    const today = new Date().toLocaleDateString();
+    document.querySelectorAll('.line')[1].innerText = today;
+</script>
+
+</body>
+</html>

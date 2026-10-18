@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Project Not Found | HTML & CSS Code Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/vault.css" />
+  <style>
+    .error-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+    }
+    .error-code {
+      font-size: clamp(5rem, 15vw, 9rem);
+      font-weight: 800;
+      line-height: 1;
+      background: var(--gradient-brand);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+    .error-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .error-desc {
+      color: var(--text-muted);
+      max-width: 480px;
+      margin-bottom: 28px;
+      line-height: 1.6;
+    }
+    .quick-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="error-wrapper">
+    <div class="error-code">404</div>
+    <h1 class="error-title">Page or Project Not Found</h1>
+    <p class="error-desc">
+      The file you requested might have been moved or renamed. Explore our 140+ HTML and CSS projects from the main vault portal.
+    </p>
+    <div class="quick-links">
+      <a href="/" class="btn-header primary">
+        <span>🚀 Return to Code Vault</span>
+      </a>
+      <a href="/HTML%20Practice/Car_Game.html" class="btn-header">
+        <span>🎮 Play Drive Mad</span>
+      </a>
+      <a href="/HTML%20Practice/tic_tac_toe_mvp.html" class="btn-header">
+        <span>❌ Tic Tac Toe</span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

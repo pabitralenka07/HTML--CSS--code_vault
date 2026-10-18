@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ID Card Generator</title>
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(circle at top, #e8f1ff, #cbd8e8);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+
+/* ================= APP ================= */
+
+.app {
+    width: 100%;
+    max-width: 1100px;
+
+    display: flex;
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* ================= EDITOR ================= */
+
+.editor {
+    width: 330px;
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.15);
+}
+
+.editor h1 {
+    margin: 0 0 5px;
+    font-size: 25px;
+}
+
+.subtitle {
+    color: #777;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.editor label {
+    display: block;
+
+    margin-top: 13px;
+    margin-bottom: 5px;
+
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.editor input {
+    width: 100%;
+
+    padding: 10px 12px;
+
+    border: 1px solid #ddd;
+    border-radius: 8px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+.editor input:focus {
+    border-color: #087bd8;
+}
+
+.editor button {
+    width: 100%;
+
+    margin-top: 22px;
+
+    padding: 12px;
+
+    border: 0;
+    border-radius: 9px;
+
+    background: #087bd8;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.editor button:hover {
+    background: #0565b4;
+}
+
+
+/* ================= PREVIEW ================= */
+
+.preview {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* ================= ID CARD ================= */
+
+.id-card {
+
+    position: relative;
+
+    width: 450px;
+    height: 680px;
+
+    overflow: hidden;
+
+    background: #fafafa;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.28);
+
+    border: 8px solid white;
+}
+
+
+
+
+/* ================= TOP DESIGN ================= */
+
+.top-blue {
+    position: absolute;
+
+    width: 130px;
+    height: 130px;
+
+    background: #087bd8;
+}
+
+.curve-left {
+    top: -75px;
+    left: -70px;
+
+    border-radius: 50%;
+}
+
+.curve-right {
+    top: -75px;
+    right: -70px;
+
+    border-radius: 50%;
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+
+    position: absolute;
+
+    top: 18px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: white;
+}
+
+.logo img {
+    width: 140%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* ================= INSTITUTION ================= */
+
+.institution {
+
+    position: absolute;
+
+    top: 91px;
+    left: 20px;
+    right: 20px;
+
+    text-align: center;
+
+    font-size: 18px;
+
+    font-weight: 900;
+
+    color: #111;
+}
+
+
+.accreditation {
+
+    position: absolute;
+
+    top: 123px;
+    left: 20px;
+    right: 20px;
+
+    text-align: center;
+
+    font-size: 10px;
+
+    color: #087bd8;
+
+    font-weight: bold;
+}
+
+
+/* ================= PHOTO ================= */
+
+.photo-container {
+
+    position: absolute;
+
+    top: 165px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 150px;
+    height: 180px;
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    border: 2px solid #bbb;
+
+    background: #eee;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+.photo-container img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: none;
+}
+
+
+#photoPlaceholder {
+
+    color: #999;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* ================= NAME ================= */
+
+.student-name {
+
+    position: absolute;
+
+    top: 365px;
+
+    left: 20px;
+    right: 20px;
+
+    text-align: center;
+
+    font-size: 25px;
+
+    font-weight: 900;
+
+    color: #111;
+
+    z-index: 3;
+}
+
+
+/* ================= WHITE CURVE ================= */
+
+.white-curve {
+
+    position: absolute;
+
+    bottom: 155px;
+
+    left: -50px;
+
+    width: 550px;
+    height: 150px;
+
+    background: #fafafa;
+
+    border-radius: 50%;
+
+    z-index: 2;
+}
+
+
+/* ================= LOWER BLUE ================= */
+
+.bottom-section {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+    right: 0;
+
+    height: 235px;
+
+    background: #087bd8;
+
+    color: white;
+}
+
+
+/* ================= DETAILS ================= */
+
+.details {
+
+    position: absolute;
+
+    left: 45px;
+
+    top: 82px;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    z-index: 5;
+}
+
+
+.details div {
+    display: flex;
+}
+
+
+.details span {
+
+    width: 115px;
+
+    font-weight: bold;
+}
+
+
+.details b {
+    font-weight: normal;
+}
+
+
+/* ================= SIGNATURE ================= */
+
+.signature {
+
+    position: absolute;
+
+    right: 25px;
+    bottom: 12px;
+
+    text-align: center;
+
+    z-index: 5;
+
+    font-size: 10px;
+}
+
+
+.signature-line {
+
+    width: 95px;
+
+    border-bottom: 1px solid white;
+
+    padding-bottom: 3px;
+
+    font-style: italic;
+}
+
+
+.signature small {
+
+    display: block;
+
+    font-size: 12px;
+
+    margin-top: 4px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 850px) {
+
+    .app {
+        flex-direction: column;
+
+        gap: 35px;
+    }
+
+    .editor {
+        width: 100%;
+        max-width: 450px;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .id-card {
+        transform: scale(.8);
+
+        transform-origin: top center;
+
+        margin-bottom: -130px;
+    }
+
+}
+/* ================= PRINT ONLY ID CARD ================= */
+
+@media print {
+
+    @page {
+        size: auto;
+        margin: 0;
+    }
+
+    html,
+    body {
+        margin: 0;
+        padding: 0;
+        background: white;
+        width: 100%;
+        height: 100%;
+    }
+
+    body {
+        display: block;
+    }
+
+    /* Hide everything except the card */
+    .editor {
+        display: none !important;
+    }
+
+    .preview {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+
+    .id-card {
+        display: block;
+
+        width: 450px;
+        height: 680px;
+
+        margin: 0 auto;
+
+        border: 8px solid white;
+
+        box-shadow: none;
+
+        /* Prevent browser from changing colors */
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- ================= EDITOR ================= -->
+    <section class="editor">
+
+        <h1>ID Card Generator</h1>
+        <p class="subtitle">Edit the fields and preview the card</p>
+
+        <label>Photo</label>
+        <input type="file" id="photoInput" accept="image/*">
+
+        <label>Name</label>
+        <input type="text" id="nameInput" value="YOUR NAME">
+
+        <label>Registration No.</label>
+        <input type="text" id="regInput" value="2401297182">
+
+        <label>Branch</label>
+        <input type="text" id="branchInput" value="CSE">
+
+        <label>Session</label>
+        <input type="text" id="sessionInput" value="2024-2028">
+
+        <label>Date of Birth</label>
+        <input type="text" id="dobInput" value="DD.MM.YYYY">
+
+        <label>Blood Group</label>
+        <input type="text" id="bloodInput" value="A+">
+
+        <label>Institution</label>
+        <input
+            type="text"
+            id="institutionInput"
+            value="NALANDA INSTITUTE OF TECHNOLOGY(NIT)"
+        >
+
+        <button onclick="window.print()">
+            🖨️ Print / Save ID Card
+        </button>
+
+    </section>
+
+
+    <!-- ================= CARD ================= -->
+    <section class="preview">
+
+        <div class="id-card">
+
+
+            <!-- TOP CURVES -->
+            <div class="top-blue curve-left"></div>
+            <div class="top-blue curve-right"></div>
+
+            <!-- LOGO -->
+            <div class="logo">
+                <img src="/clg_logo.png" alt="Logo">
+            </div>
+
+            <!-- INSTITUTION -->
+            <div class="institution" id="institution">
+                NALANDA INSTITUTE OF TECHNOLOGY(NIT)
+            </div>
+
+            <div class="accreditation">
+                Accredited by NAAC with Grade "A+" | Approved by AICTE, New Delhi | Affiliated to BPUT, Roulkela
+            </div>
+
+            <!-- PHOTO -->
+            <div class="photo-container">
+
+                <img
+                    id="studentPhoto"
+                    src=""
+                    alt="Student Photo"
+                >
+
+                <div id="photoPlaceholder">
+                    PHOTO
+                </div>
+
+            </div>
+
+            <!-- NAME -->
+            <div class="student-name" id="studentName" >
+                YOUR NAME
+            </div>
+
+            <!-- WHITE CURVE -->
+            <div class="white-curve"></div>
+
+            <!-- BLUE LOWER SECTION -->
+            <div class="bottom-section">
+
+                <div class="details">
+
+                    <div>
+                        <span>REGD.NO:</span>
+                        <b id="regNo" >2401297182</b>
+                    </div>
+
+                    <div>
+                        <span>BRANCH :</span>
+                        <b id="branch" >CSE</b>
+                    </div>
+
+                    <div>
+                        <span>SESSION :</span>
+                        <b id="session">2024-2028</b>
+                    </div>
+
+                    <div>
+                        <span>DOB :</span>
+                        <b id="dob">12.11.2005</b>
+                    </div>
+
+                    <div>
+                        <span>BLOOD G:</span>
+                        <b id="blood">A+</b>
+                    </div>
+
+                </div>
+
+                <!-- SIGNATURE -->
+                <div class="signature">
+                    <div class="signature-line">
+                        P.K.Subudhi
+                    </div>
+                    <small>Principal</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</div>
+
+<script>
+/* =========================================
+    TEXT FIELD HANDLING
+========================================= */
+
+function bindInput(inputId, outputId) {
+
+    const input = document.getElementById(inputId);
+    const output = document.getElementById(outputId);
+
+    input.addEventListener("input", function () {
+        output.textContent = input.value;
+    });
+}
+
+
+bindInput("nameInput", "studentName");
+bindInput("regInput", "regNo");
+bindInput("branchInput", "branch");
+bindInput("sessionInput", "session");
+bindInput("dobInput", "dob");
+bindInput("bloodInput", "blood");
+bindInput("institutionInput", "institution");
+
+
+/* =========================================
+    PHOTO UPLOAD
+========================================= */
+
+const photoInput =
+    document.getElementById("photoInput");
+
+const studentPhoto =
+    document.getElementById("studentPhoto");
+
+const photoPlaceholder =
+    document.getElementById("photoPlaceholder");
+
+
+photoInput.addEventListener("change", function () {
+
+    const file = this.files[0];
+
+    if (!file) {
+        return;
+    }
+
+    if (!file.type.startsWith("image/")) {
+        alert("Please select an image.");
+        return;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = function (event) {
+
+        studentPhoto.src =
+            event.target.result;
+
+        studentPhoto.style.display =
+            "block";
+
+        photoPlaceholder.style.display =
+            "none";
+    };
+
+    reader.readAsDataURL(file);
+});
+</script>
+
+</body>
+</html>

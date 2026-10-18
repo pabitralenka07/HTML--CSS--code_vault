@@ -1,0 +1,18 @@
+*{
+    font-family: verdana;
+    background-color:#FFB941;
+    letter-spacing: 20px;
+    word-spacing: 20px;
+    text-shadow:1px 10px 15px blue;
+
+    border-style:solid;
+    border-top style:solid;
+    border-bottom style:solid;
+    border-width:1px;
+    /* border-left-style:solid; */
+    /* border-right-style:solid; */
+    border-bottom-width:2px;
+    border-left-width:2px;
+    border-right-width:2px;
+    border-top-width:2px;
+}

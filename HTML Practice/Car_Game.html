@@ -1,0 +1,900 @@
+    <!-- <!DOCTYPE html>
+    <html lang="en-us">
+
+    <head>
+    <script src="https://deckard.openprocessing.org/user485717/visual2458132/hf42bec4b58ab09712c0f3bedb92cada1/index.wasm.js"></script>
+    <script src="https://deckard.openprocessing.org/user485717/visual2458132/hf42bec4b58ab09712c0f3bedb92cada1/index.data.js"></script>
+    <title>Drive Mad </title>
+    </head>
+
+    <body id="body">
+    <style>
+        @font-face {
+        font-family: 'baloo 2';
+        font-style: normal;
+        font-weight: 800;
+        font-display: swap;
+        src: url(baloo2.woff) format('woff');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD
+        }
+
+        .fullscreen {
+        position: absolute;
+        width: 100%;
+        height: 100%
+        }
+
+        .center {
+        text-align: center
+        }
+
+        .centered {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        text-align: center
+        }
+
+        #play_overlay {
+        display: none;
+        z-index: 10
+        }
+
+        .middle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+        }
+
+        .middle_vertical {
+        position: absolute;
+        top: 50%;
+        transform: translate(0%, -50%)
+        }
+
+        .edge {
+        margin-left: auto;
+        margin-right: auto;
+        width: 164px;
+        height: 180px;
+        background-color: #cfdaed;
+        box-shadow: 5px 1px 5px rgba(0, 0, 0, .25);
+        transform: rotate(-5deg)
+        }
+
+        .box {
+        width: 164px;
+        height: 164px;
+        background-color: #fff;
+        position: relative
+        }
+
+        .black {
+        width: 132px;
+        height: 156px;
+        background-color: #000;
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        margin: 0 auto
+        }
+
+        .cover {
+        width: 128px;
+        height: 128px;
+        margin: 2px
+        }
+
+        .title {
+        font-size: 14px;
+        font-family: 'baloo 2', ubuntu, verdana, sans-serif
+        }
+
+        .author {
+        font-family: 'baloo 2', ubuntu, verdana, sans-serif;
+        border-spacing: 0;
+        font-size: 14px;
+        color: #ccc;
+        text-align: right;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        position: absolute;
+        width: 150px;
+        top: 4px;
+        right: 142px;
+        transform-origin: right top;
+        transform: rotate(-90deg)
+        }
+
+        .loading {
+        margin-top: 20px;
+        margin-bottom: 10px
+        }
+
+        .description {
+        font-family: 'baloo 2', ubuntu, verdana, sans-serif;
+        display: inline-block;
+        font-size: 16px;
+        line-height: 1.2em;
+        width: 240px
+        }
+
+        .button {
+        display: inline-block;
+        border: 2px solid #00a2ff;
+        border-radius: 7px;
+        width: 133px;
+        height: 43px;
+        font-size: 16px;
+        line-height: 43px;
+        margin: 0 auto
+        }
+
+        .overlay_button {
+        display: inline-block;
+        border: 2px solid #000;
+        border-radius: 12px;
+        width: 200px;
+        height: 50px;
+        font-size: 18px;
+        line-height: 50px;
+        margin: 11px
+        }
+
+        #play_button {
+        color: #333;
+        background-color: #eee
+        }
+
+        .emscripten_border {
+        position: relative
+        }
+
+        #gradient {
+        background-image: linear-gradient(135deg, #70e1fd, #00a2ff);
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 768px
+        }
+
+        * {
+        margin: 0;
+        padding: 0
+        }
+
+        p,
+        ul,
+        ol,
+        dl {
+        margin-bottom: 1em
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p,
+        ul,
+        ol,
+        dl {
+        margin-left: 16px;
+        margin-right: 16px
+        }
+
+        img {
+        vertical-align: top
+        }
+
+        html,
+        body {
+        font-family: 'baloo 2', ubuntu, verdana, sans-serif;
+        font-size: 18px;
+        color: #bbb;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border: 0;
+        line-height: 1.8;
+        overflow: hidden;
+        display: block
+        }
+
+        canvas {
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        margin-top: auto;
+        margin-bottom: auto;
+        position: relative;
+        width: 1024px;
+        height: 768px
+        }
+
+        div.emscripten {
+        text-align: center
+        }
+
+        canvas.emscripten {
+        border: 0;
+        background-color: #000
+        }
+
+        #status {
+        display: inline-block;
+        width: 100%;
+        font-weight: 700;
+        color: #787878;
+        text-align: center
+        }
+
+        #modal_parent {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: #000;
+        background-color: rgba(0, 0, 0, .4)
+        }
+
+        .modal_inner {
+        display: none
+        }
+
+        #play_content {
+        color: #fff;
+        z-index: 10
+        }
+
+        #modal_content {
+        position: relative;
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        box-sizing: border-box
+        }
+
+        .error_message {
+        color: red
+        }
+
+        .error_text {
+        color: red;
+        font-family: sans-serif;
+        font-size: .8em
+        }
+
+        #modal_close_button {
+        color: #aaa;
+        position: absolute;
+        right: 15px;
+        top: 10px;
+        font-size: 28px;
+        line-height: 28px;
+        font-weight: 700;
+        transition: .2s
+        }
+
+        #modal_close_button:hover,
+        #modal_close_button:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer
+        }
+
+        a:link {
+        color: #00b9fe;
+        text-decoration: none;
+        transition: .2s
+        }
+
+        a:visited {
+        color: #00b9fe
+        }
+
+        a:hover,
+        a:active {
+        opacity: .5
+        }
+
+        .link_image_button {
+        margin-right: 10px
+        }
+
+        .playstore075 {
+        width: 153px;
+        height: 45px
+        }
+
+        .appstore075 {
+        width: 135px;
+        height: 45px
+        }
+
+        #progress_or_play {
+        margin-top: 10px
+        }
+
+        #terms_p {
+        font-family: sans-serif;
+        color: #141414;
+        font-size: .7em;
+        margin-bottom: 0
+        }
+
+        #terms_p a {
+        color: #f0f0f0
+        }
+
+        .deeplink_message {
+        font-size: 1em;
+        color: #f0f0f0;
+        line-height: 1.1em;
+        font-size: 20px
+        }
+
+        .menu {
+        color: #f0f0f0
+        }
+
+        .level_button {
+        border: 2px solid #222;
+        border-radius: 1em;
+        color: #f0f0f0;
+        background-color: #00a2ff;
+        line-height: 1em;
+        height: 2.5em;
+        width: 5em;
+        justify-self: center;
+        position: relative;
+        padding-top: .6em
+        }
+
+        .grid_element_center {
+        justify-self: center
+        }
+
+        .level_button_name {
+        font-size: .6em;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis
+        }
+
+        .level_button_number {
+        font-size: 1.2em
+        }
+
+        .level_button:hover {
+        background-color: #00c2ff
+        }
+
+        .level_checkmark {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        text-align: right;
+        font-size: 1.2em;
+        line-height: 1.2em
+        }
+
+        .level_button a {
+        color: #f0f0f0;
+        opacity: 1
+        }
+
+        .menu_items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        margin-bottom: 20px
+        }
+
+        .menu_header {
+        font-size: 3em;
+        margin-top: 40px
+        }
+
+        #webview_content {
+        display: none;
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 768px
+        }
+
+        .webview {
+        width: 100%;
+        height: 100%;
+        background: 0 0;
+        margin: 0;
+        border: 0;
+        overflow: hidden
+        }
+    </style>
+
+    <div id="modal_parent">
+        <div id="modal_content">
+        <span id="modal_close_button">&times;</span>
+        <div id="store_link_modal_content" class="modal_inner"></div>
+        <div id="share_file_modal_content" class="modal_inner"></div>
+        </div>
+    </div>
+    <div id="canvas_border" class="emscripten_border">
+        <div id="play_content" class="middle center">
+        <div class="edge">
+            <div class="box">
+            <div class="black">
+                <img src="webapp/cover.jpg" class="cover" />
+                <p class="title">Drive Mad</p>
+                <p class="author">Martin Magni</p>
+            </div>
+            </div>
+        </div>
+        <div id="progress_or_play"><progress id="progress" class="loading" value="0" max="100"></progress></div>
+        <p class="description"></p>
+        </div>
+        <canvas class="emscripten" id="canvas" tabindex="-1"></canvas>
+        <div id="gradient"></div>
+        <div id="webview_content"></div>
+    </div>
+    <script type="text/javascript">
+        var pokiDebug = false;
+        var postRunDone = false;
+        var theDomLoaded = false;
+        var pokiInited = false;
+        var gameReadyToStart = false;
+        var requestedCanvas = false;
+        var adblocker = false;
+        var gameStarted = false;
+        var updatedScreenSize = false;
+        var startupTimeStr = "";
+        var loadProgressFrac = 0;
+        var fakeProgressPercentStart = 80 + Math.random() * 15;
+        window.addEventListener('DOMContentLoaded', domContentLoaded);
+        window.addEventListener('load', function() {
+        console.log("Load event received");
+        if (inIframe()) {
+            document.addEventListener('click', ev => {
+            let canvas = document.getElementById('canvas');
+            if (canvas) {
+                canvas.focus();
+            }
+            });
+        }
+        });
+
+        function inIframe() {
+        try {
+            return window.self !== window.top;
+        } catch (e) {
+            return true;
+        }
+        }
+
+        function updateLoadProgress() {
+        let progressElement = document.getElementById('progress');
+        if (progressElement) {
+            progressElement.value = Math.round(loadProgressFrac * fakeProgressPercentStart);
+            progressElement.max = 100;
+        }
+        if (loadProgressFrac >= 1) {
+            console.log("Loading done");
+            tryStartGame();
+        }
+        }
+
+        function domContentLoaded() {
+        initPokiSdk();
+        console.log("DOM content loaded event received");
+        let canvas = document.getElementById('canvas');
+        canvas.addEventListener("contextmenu", stopContextMenu);
+        if (!postRunDone) {
+            resizeCanvas(false);
+        }
+        window.addEventListener('blur', ev => setGameFocus(true));
+        window.addEventListener('focus', ev => setGameFocus(false));
+        canvas.onpointerdown = beginPointerDrag;
+        canvas.onpointerup = endPointerDrag;
+        theDomLoaded = true;
+        }
+
+        function beginPointerDrag(e) {
+        let canvas = document.getElementById('canvas');
+        canvas.setPointerCapture(e.pointerId);
+        }
+
+        function endPointerDrag(e) {
+        let canvas = document.getElementById('canvas');
+        canvas.releasePointerCapture(e.pointerId);
+        }
+
+        function setGameFocus(f) {
+        if (postRunDone) {
+            Module.ccall('set_game_focus', 'v', ['number'], [f]);
+        }
+        }
+
+        function canBeGameGuid(str) {
+        return str && str.match('([A-F]|[0-9]){16}');
+        }
+
+        function getMeta(metaName) {
+        const metas = document.getElementsByTagName('meta');
+        for (let i = 0; i < metas.length; i++) {
+            if (metas[i].getAttribute('name') === metaName) {
+            return metas[i].getAttribute('content');
+            }
+        }
+        return '';
+        }
+
+        function getCSSRgb(color) {
+        return `rgb(${Math.round(color[0])}, ${Math.round(color[1])}, ${Math.round(color[2])})`;
+        }
+        let lastGradientStyleStr = "";
+        let lastDeepLinkLoadFraction = 0;
+
+        function getGradientStr(frac) {
+        let fromColor = [frac * 0x70, frac * 0xe1, frac * 0xfd];
+        let toColor = [frac * 0x00, frac * 0xa2, frac * 0xff];
+        let str = `linear-gradient(135deg, ${getCSSRgb(fromColor)}, ${getCSSRgb(toColor)})`
+        return str;
+        }
+
+        function hideOverlayGradient() {
+        var gradient = document.getElementById('gradient');
+        gradient.style.display = "none";
+        }
+        var showedStartGameError = false;
+
+        function setPokiInited() {
+        pokiInited = true;
+        }
+
+        function initPokiSdk() {
+        setPokiInited();
+        }
+
+        function hideOverlay() {
+        var playContent = document.getElementById('play_content');
+        playContent.style.display = "none";
+        hideOverlayGradient();
+        }
+
+        function startGame() {
+        try {
+            console.log("Registering event listeners");
+            window.addEventListener("beforeunload", function(event) {
+            Module.ccall('app_terminate_if_necessary', 'v');
+            });
+            window.addEventListener("unload", function(event) {
+            Module.ccall('app_terminate_if_necessary', 'v');
+            });
+            document.addEventListener("visibilitychange", function() {
+            if (document.visibilityState === 'visible') {
+                Module.ccall('app_resume', 'v');
+            } else {
+                Module.ccall('app_pause', 'v');
+            }
+            });
+            console.log("Confirming accept in app");
+            try {
+            Module.ccall('user_accepted_and_clicked', 'v');
+            Module.ccall('set_is_mobile', 'v', ['number'], [matchMedia('(pointer:coarse)').matches]);
+            } catch (err4) {}
+            gameStarted = true;
+            if (!updatedScreenSize) {
+            resizeCanvas(true);
+            }
+        } catch (err) {
+            if (!showedStartGameError) {
+            let foundModuleAsm = false;
+            let additionalInfo = "";
+            try {
+                if (Module["asm"]) {
+                foundModuleAsm = true;
+                }
+            } catch (err2) {}
+            if (!foundModuleAsm) {
+                additionalInfo += "Could not find Module.asm";
+            }
+            console.log(`Error when starting game. Try to reload the page. Error message: ${err}. ${additionalInfo}`);
+            showedStartGameError = true;
+            }
+        }
+        }
+        var pokiStopped = true;
+
+        function pokiEnsureStop() {
+        if (!pokiStopped) {
+            pokiStopped = true;
+        }
+        }
+
+        function pokiEnsureStart() {
+        if (pokiStopped) {
+            pokiStopped = false;
+        }
+        }
+        var startGameAttempts = 0;
+        var tryStartGameTimeout = null;
+
+        function tryStartGame() {
+        console.log("tryStartGame()", gameReadyToStart);
+        if (gameReadyToStart) {
+            return;
+        }
+        if (!postRunDone || !theDomLoaded || !pokiInited) {
+            startGameAttempts++;
+            if (startGameAttempts == 20) {
+            return;
+            }
+            if (tryStartGameTimeout != null) {
+            clearTimeout(tryStartGameTimeout);
+            }
+            tryStartGameTimeout = setTimeout(tryStartGame, startGameAttempts * 100);
+            console.log("Not ready to start game yet...");
+            return;
+        }
+        gameReadyToStart = true;
+        console.log("Starting game");
+        startGame();
+        }
+
+        function simpleLogC(str) {
+        if (postRunDone) {
+            Module.ccall('log_simple', 'v', ['string'], [str]);
+        } else {
+            console.log(str);
+        }
+        }
+
+        function appErrorC(code, str) {
+        if (postRunDone) {
+            Module.ccall('app_error', 'v', ['number', 'string'], [code, str]);
+        } else {
+            console.error(str, code);
+        }
+        }
+
+        function simpleAppErrorC(str) {
+        appErrorC(1, str);
+        }
+
+        function parseUrlArgument(name) {
+        let result = "";
+        let str = window.location.search;
+        if (str.length > 0 && str[0] == '?') {
+            var arr = str.substr(1).split('&');
+            for (let i = 0; i < arr.length; i++) {
+            if (arr[i].startsWith(name + "=")) {
+                result = arr[i].substr(name.length + 1);
+                break;
+            }
+            }
+        }
+        return result;
+        }
+
+        function parseUrlArgumentInt(name) {
+        let str = parseUrlArgument(name);
+        let parsed = parseInt(str);
+        if (isNaN(parsed)) {
+            return 0;
+        } else {
+            return parsed;
+        }
+        }
+
+        function resizeCanvas(informC) {
+        let iw = window.innerWidth;
+        let ih = window.innerHeight;
+        let canvas = document.getElementById('canvas');
+        let border = document.getElementById('canvas_border');
+        canvas.width = iw * window.devicePixelRatio;
+        canvas.height = ih * window.devicePixelRatio;
+        border.style.marginTop = '0px';
+        let gradient = document.getElementById("gradient");
+        let webViewContent = document.getElementById("webview_content");
+        [gradient, webViewContent].forEach(e => {
+            if (e) {
+            e.style.left = '0px';
+            }
+        });
+        [canvas, gradient, webViewContent].forEach(e => {
+            if (e) {
+            e.style.width = iw + 'px';
+            e.style.height = ih + 'px';
+            e.style.borderRadius = '0px';
+            }
+        });
+        if (informC && gameStarted && requestedCanvas) {
+            Module.ccall("update_screen_size", "v", ["number", "number", "number"], [canvas.width, canvas.height, window.devicePixelRatio]);
+            updatedScreenSize = true;
+        }
+        }
+
+        function stopContextMenu(event) {
+        event.preventDefault();
+        return false;
+        }
+        var Module = {
+        locateFile: function(path, prefix) {
+            if (prefix == "") {
+            return "" + path;
+            }
+            return prefix + path;
+        },
+        preRun: [function() {
+            console.log("preRun() called");
+        }],
+        postRun: [function() {
+            console.log("postRun() called");
+            document.onfullscreenchange = function() {
+            setTimeout(function() {
+                resizeCanvas(true);
+                if (document.fullscreenElement && gameStarted && requestedCanvas) {
+                let canvas = document.getElementById('canvas');
+                Module.ccall("update_screen_size", "v", ["number", "number", "number"], [canvas.width, canvas.height, 1]);
+                }
+            }, 500);
+            };
+            window.addEventListener('resize', (event) => resizeCanvas(true), false);
+            if (theDomLoaded) {
+            resizeCanvas(true);
+            }
+            console.log("Registering keydown listener");
+            window.addEventListener('keydown', e => {
+            ccall("keydown_browser", "v", ["string"], [e.key]);
+            });
+            postRunDone = true;
+        }],
+        print: (function() {
+            return function(text) {
+            if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
+            console.log(text);
+            };
+        })(),
+        printErr: function(text) {
+            if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
+            console.error(text);
+        },
+        canvas: (function() {
+            var canvas = document.getElementById('canvas');
+            canvas.addEventListener("webglcontextlost", function(e) {
+            alert('WebGL context lost. You will need to reload the page.');
+            e.preventDefault();
+            }, false);
+            requestedCanvas = true;
+            return canvas;
+        })(),
+        setStatus: function(text) {
+            if (!Module.setStatus.last) Module.setStatus.last = {
+            time: Date.now(),
+            text: ''
+            };
+            if (text === Module.setStatus.last.text) return;
+            var m = text.match(/([^(]+)\((\d+(\.\d+)?)\/(\d+)\)/);
+            var now = Date.now();
+            if (m && now - Module.setStatus.last.time < 30) return;
+            Module.setStatus.last.time = now;
+            Module.setStatus.last.text = text;
+            if (m) {
+            text = m[1];
+            loadProgressFrac = parseInt(m[2]) / parseInt(m[4]);
+            } else {
+            loadProgressFrac = 1;
+            }
+            updateLoadProgress();
+        },
+        totalDependencies: 0,
+        monitorRunDependencies: function(left) {
+            this.totalDependencies = Math.max(this.totalDependencies, left);
+        }
+        };
+        var notifications = [];
+        var webViewIframe = null;
+        var storedScripts = [];
+        var webviewDomLoaded = false;
+        async function isUrlFound(url) {
+        try {
+            const response = await fetch(url, {
+            method: 'HEAD',
+            cache: 'no-cache'
+            });
+            return response.status === 200;
+        } catch (error) {
+            return false;
+        }
+        }
+
+        function checkHintFileExist(src, li) {
+        isUrlFound(src).then(found => {
+            if (found) {
+            Module.ccall('notify_hint_file_available', 'v', ['string'], [src]);
+    }
+    });
+} -->
+
+  <script type="text/javascript">
+    // ... (keep your existing code above unchanged) ...
+
+    async function isUrlFound(url) {
+      try {
+        const response = await fetch(url, {
+          method: 'HEAD',
+          cache: 'no-cache'
+        });
+        return response.ok;
+      } catch (error) {
+        // network-error treat as not found
+        return false;
+      }
+    }
+
+    function checkHintFileExist(src, li) {
+      // src: URL to check, li: optional index or id used by Module (if needed)
+      isUrlFound(src).then(found => {
+        try {
+          // call a c function or JS-facing function in Module, if available.
+          // Use Module.ccall to be explicit. If Module.ccall isn't ready yet, just log.
+          if (typeof Module !== "undefined" && typeof Module.ccall === "function") {
+            // Example: call a C function 'hint_file_exists' with signature int hint_file_exists(int idx, int exists)
+            // Adjust the ccall arguments to match the actual C binding you have, or remove if not required.
+            // Here we attempt to call a function named 'hint_file_exists' if it exists.
+            try {
+              Module.ccall('hint_file_exists', 'v', ['number', 'number'], [li || 0, found ? 1 : 0]);
+            } catch (e) {
+              // fallback: call a JS export if present
+              console.log('Module.ccall failed for hint_file_exists:', e);
+            }
+          } else {
+            // Module.ccall not ready — log result for debugging
+            console.log(`Hint file check for "${src}": ${found ? 'FOUND' : 'NOT FOUND'}`, li);
+          }
+        } catch (e2) {
+          console.error("Error while reporting hint-file existence:", e2);
+        }
+      }).catch(err => {
+        console.error("checkHintFileExist promise rejected:", err);
+      });
+    }
+
+    // Recommended: ensure keydown handler uses Module.ccall and guards if Module not ready.
+    window.addEventListener('keydown', e => {
+      try {
+        if (typeof Module !== "undefined" && typeof Module.ccall === "function") {
+          Module.ccall("keydown_browser", "v", ["string"], [e.key]);
+        } else if (typeof ccall === "function") {
+          // fallback to global ccall if present
+          ccall("keydown_browser", "v", ["string"], [e.key]);
+        } else {
+          // Not ready yet — optionally queue events or ignore
+          // console.log("keydown event queued or ignored (Module not ready):", e.key);
+        }
+      } catch (err) {
+        console.error("keydown handler error:", err);
+      }
+    });
+
+    // If you want to call checkHintFileExist for some URLs on load, example:
+    // checkHintFileExist('webapp/cover.jpg', 1);
+    // checkHintFileExist('baloo2.woff', 2);
+
+  </script>
+  
