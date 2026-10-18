@@ -24,8 +24,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
 
-  <!-- Vault Stylesheet -->
+  <!-- Vault Stylesheet & ParticleText -->
   <link rel="stylesheet" href="vault.css" />
+  <link rel="stylesheet" href="ParticleText.css" />
 </head>
 <body>
 
@@ -80,9 +81,10 @@
         <span>140+ Projects • Instant Device Previews • 100% Responsive</span>
       </div>
 
-      <h1 class="hero-title">
-        The Ultimate <span class="hero-gradient-text">HTML & CSS</span> Code Vault
-      </h1>
+      <!-- ParticleText Animation Component -->
+      <div style="width: 100%; height: 360px; max-width: 1100px; margin: 0 auto; position: relative;">
+        <div id="particleText" style="width: 100%; height: 100%;"></div>
+      </div>
 
       <p class="hero-subtitle">
         A curated, high-performance showcase of interactive games, production UI components, frontend challenges, form validators, tables, and reference cheatsheets.
@@ -313,6 +315,39 @@
       </div>
     </div>
   </footer>
+
+  <!-- ParticleText Script & Initialization -->
+  <script src="ParticleText.js"></script>
+  <script>
+    if (typeof initParticleText === 'function') {
+      const ptContainer = document.getElementById('particleText');
+      if (ptContainer) {
+        initParticleText(ptContainer, {
+          text: "The Ultimate HTML & CSS Code Vault",
+          particleSize: 2.2,
+          density: 4,
+          color: "currentColor",
+          highlightColor: "#ff5a36",
+          highlightMode: "motion",
+          shape: "circle",
+          intro: "gather",
+          scatter: 190,
+          gatherDuration: 1600,
+          stagger: 420,
+          clickBurst: true,
+          burstStrength: 1,
+          pointerRepel: 42,
+          repelRadius: 120,
+          idleDrift: 0.8,
+          trigger: "mount",
+          fontSize: "clamp(3.5rem, 13vw, 9rem)",
+          fontWeight: 800,
+          fontFamily: "inherit",
+          glow: true
+        });
+      }
+    }
+  </script>
 
   <!-- Vault Script -->
   <script src="vault.js"></script>
