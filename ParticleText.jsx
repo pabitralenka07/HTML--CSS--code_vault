@@ -645,8 +645,9 @@ export const ParticleText = ({
     };
   }, []);
 
+  const containerStyle = { width: '100%', height: 360, ...style };
   return (
-    <div ref={containerRef} className={`particle-text ${className}`.trim()} style={{ width: '100%', height: 360, ...style }}>
+    <div ref={containerRef} className={`particle-text ${className}`.trim()} style={containerStyle}>
       <canvas ref={canvasRef} className="particle-text__canvas" aria-hidden="true" />
       <span className="particle-text__sr">{text}</span>
     </div>

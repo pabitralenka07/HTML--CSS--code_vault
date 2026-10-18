@@ -1,0 +1,12 @@
+title: HTML & CSS Code Vault
+description: 140+ Interactive Web Demos & UI Components
+theme: null
+plugins: []
+exclude:
+  - ".vercel"
+  - "vercel.json"
+  - "ParticleText.jsx"
+  - "node_modules"
+  - "package.json"
+  - "package-lock.json"
+  - "projects-data.json"
